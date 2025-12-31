@@ -1,0 +1,166 @@
+<!-- ================= HERO VIDEO SECTION ================= -->
+
+<section class="hero-section">
+  <div class="container-fluid p-0">
+    <div class="ratio ratio-16x9 position-relative">
+
+      <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover">
+        <source [src]="imageUrl+ home?.heroVideo" type="video/mp4">
+      </video>
+
+      <div class="hero-overlay d-flex flex-column
+                  justify-content-center align-items-center
+                  text-center text-white">
+        <h1 class="fw-bold">{{home?.heroTitle}}</h1>
+        <p class="fs-5">{{home?.heroSubtitle}}</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FOUNDERS / DOCTORS ================= -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Specialists</h2>
+
+    <div class="row justify-content-center">
+
+      <!-- Doctor 1 -->
+      <!-- <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm text-center h-100">
+          <img src="assets/images/doctors/doctor1.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="mb-1">Dr. Sudhakara Maller</h5>
+            <p class="text-muted mb-0">
+              MDS – Prosthodontist & Implantologist
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Doctor 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm text-center">
+          <img [src]="imageUrl+ home?.doctorImage" class="card-img-top">
+          <div class="card-body">
+            <h5 class="mb-1">{{home?.doctorName}}</h5>
+            <p class="text-muted mb-0">
+             {{home?.doctorQualification}} | {{home?.doctorPosition}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= DENTAL TREATMENTS ================= -->
+<section class="py-5">
+  <h2 class="text-center mb-4">Our Dental Treatments</h2>
+  <div class="container">
+    
+
+    <div
+      id="treatmentCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+
+        <div
+          class="carousel-item"
+          *ngFor="let chunk of serviceChunks; let i = index"
+          [class.active]="i === 0"
+        >
+          <div class="row g-3 justify-content-center">
+
+            <div
+              class="col-lg-3 col-md-4 col-6"
+              *ngFor="let service of chunk"
+            >
+              <div class="card treatment-card h-100 text-center shadow-sm">
+
+                <!-- IMAGE -->
+                <img
+                  [src]="imageUrl + service.image"
+                  class="image-wrapper"
+                  alt="{{ service.name }}"
+                >
+
+                <div class="card-body">
+                  <h6 class="fw-semibold mb-2">
+                    {{ service.name }}
+                  </h6>
+
+                  <p class="small text-muted">
+                    {{ service.shortDesc }}
+                  </p>
+
+                  <a
+                    [routerLink]="['/services', service.slug]"
+                    class="btn btn-outline-primary btn-sm"
+                  >
+                    View Details
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#treatmentCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#treatmentCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ================= APPOINTMENT SECTION ================= -->
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <div class="row shadow rounded g-4 align-items-stretch">
+
+      <!-- Image -->
+      <div class="col-lg-6 p-3">
+        <img
+         [src]="imageUrl+ home?.splitImage"
+          class="split-image-wrapper"
+        />
+      </div>
+      <!-- Appointment Form -->
+     <div class="col-lg-6 p-5 bg-white">
+        <h3 class="mb-3">Book an Appointment</h3>
+        <app-appointment></app-appointment>
+      </div>
+
+    </div>
+  </div>
+</section>

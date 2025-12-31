@@ -1,0 +1,247 @@
+.contact-hero {
+  height: 40vh;
+  background: url('/assets/clinic-bg.jpg') center/cover no-repeat;
+  position: relative;
+
+  .overlay {
+    background: rgba(0,0,0,0.55);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.contact-page {
+  padding: 60px 8%;
+  background: #213448;
+}
+
+/* MAIN SPLIT CONTAINER */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* RIGHT SIDE */
+.contact-form {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  background: #1c2d4f;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+// .contact-container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   gap: 40px;
+//   padding: 60px 10%;
+//   background: #f9f9f9;
+// }
+
+// .info-box {
+//   background: #ffffff;
+//   padding: 28px;
+//   border-radius: 14px;
+//   box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+//   transition: all 0.35s ease;
+//   position: relative;
+//   overflow: hidden;
+
+//   h3 {
+//     margin-top: 15px;
+//     margin-bottom: 8px;
+//   }
+
+//   p {
+//     color: #555;
+//   }
+
+//   /* ICON CIRCLE */
+//   .icon {
+//     width: 52px;
+//     height: 52px;
+//     background: #1c2d4f;
+//     border-radius: 50%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     transition: all 0.35s ease;
+
+//     i {
+//       color: #fff;
+//       font-size: 20px;
+//     }
+//   }
+
+//   /* HOVER EFFECT */
+//   &:hover {
+//     transform: translateY(-10px);
+//     box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+//   }
+
+//   &:hover .icon {
+//     background: #b48b5a;
+//     transform: rotate(8deg) scale(1.1);
+//   }
+// }
+.info-box {
+  padding: 28px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #7fdede 0%,
+    #eef3ff 100%
+  );
+  border: 1px solid rgba(28,45,79,0.08);
+  box-shadow: 0 10px 30px rgba(28,45,79,0.08);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.info-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(28,45,79,0.15);
+}
+.icon {
+  background: linear-gradient(135deg, #1c2d4f, #b48b5a);
+}
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Icon Circle */
+.icon {
+  width: 40px;
+  height: 40px;
+  background: #1c2d4f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+
+  i {
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+.info-box h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+/* Hover Enhancement */
+.info-box:hover .icon {
+  background: #b48b5a;
+  transform: scale(1.1) rotate(5deg);
+}
+
+
+.contact-form {
+  background: #7fdede;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #8b5e3c;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:disabled {
+        background: #ccc;
+      }
+    }
+  }
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 40px 5%;
+  }
+}

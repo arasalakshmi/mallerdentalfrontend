@@ -1,0 +1,162 @@
+/* HERO */
+.container{
+  background-color: var(--main-bg);
+}
+.hero-section {
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(33, 52, 72, 0.6);
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+/* SPLIT SECTION IMAGE */
+.split-image-wrapper {
+  width: 100%;
+  height: 860px;              /* 🔥 KEY FIX */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.split-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* DOCTOR CARD IMAGE FIX */
+.card-img-top {
+  height: 260px;          /* 🔥 FIX CARD HEIGHT */
+  object-fit: cover;
+}
+
+/* DOCTOR CARD BODY COMPACT */
+.card .card-body {
+  padding: 1rem;
+}
+
+.card h5 {
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+
+/* TREATMENT CARDS */
+/* Image container */
+.treatment-card .image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* balanced medical look */
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Image itself */
+.treatment-card .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* fill nicely */
+  object-position: center; /* adjust focus */
+}
+.treatment-card {
+  height: 100%;
+}
+
+.treatment-card .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Limit description height */
+.treatment-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+
+  display: -webkit-box;
+     /* max 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Keep button at bottom */
+.treatment-card .btn {
+  margin-top: auto;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev {
+  left: -2%;
+}
+
+.carousel-control-next {
+  right: -2%;
+}
+
+/* Make arrows subtle */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60% 60%;
+  opacity: 0.6;
+}
+
+
+/* MOBILE TWEAKS */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+}
+/* HERO MOBILE FIX */
+@media (max-width: 768px) {
+  .hero-section {
+    .ratio {
+      --bs-aspect-ratio: 75%; /* shorter hero */
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 768px) {
+  .appointment-section img {
+    height: 220px;
+    border-radius: 8px;
+  }
+
+  mat-form-field {
+    margin-bottom: 12px;
+  }
+
+  button[mat-raised-button] {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

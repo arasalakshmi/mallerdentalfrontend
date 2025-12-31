@@ -1,0 +1,86 @@
+<!-- Hero -->
+<section class="contact-hero">
+  <div class="overlay">
+    <h1>Contact Us</h1>
+    <p>Your smile begins with a conversation</p>
+  </div>
+</section>
+
+<!-- MAIN CONTAINER -->
+<section class="contact-page">
+
+  <div class="contact-container">
+
+    <!-- LEFT -->
+<div class="contact-info">
+
+ 
+
+  <div class="info-box">
+    <div class="info-header">
+    <span class="icon">
+      <i class="fa-solid fa-map"></i>
+    </span>
+    <h3>Address</h3>
+  </div>
+   Maller Dental Clinic<br>
+   Goutham Arcade,1st floor, <br>
+   yesbank building,opposite snehalaya sliks<br>
+   East Tv samy road,Rspuram,coimbatore
+
+  </div>
+   <div class="info-box">
+   <div class="info-header">
+    <span class="icon">
+      <i class="fa-solid fa-phone"></i>
+    </span>
+    <h3>Phone Number</h3>
+  </div>
+    <p>+91 94429 51313</p>
+  </div>
+
+  <div class="info-box">
+     <div class="info-header">
+    <span class="icon">
+      <i class="fa-solid fa-clock"></i>
+    </span>
+    <h3>Timings</h3>
+  </div>
+    <p>
+      Monday – Saturday<br>
+      10:30 AM – 6:30 PM<br>
+      Sunday: By Appointment
+    </p>
+  </div>
+
+</div>
+
+
+    <!-- RIGHT -->
+    <div class="contact-form">
+
+      <h2>Send Us a Message</h2>
+
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <input type="text" placeholder="Full Name" formControlName="name">
+        <input type="email" placeholder="Email Address" formControlName="email">
+        <input type="tel" placeholder="Phone Number" formControlName="phone">
+        <textarea placeholder="Message" formControlName="message"></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Map -->
+<section class="map-section">
+  <iframe
+    src="https://www.google.com/maps?q=RS%20Puram%20Coimbatore&output=embed"
+    loading="lazy">
+  </iframe>
+</section>

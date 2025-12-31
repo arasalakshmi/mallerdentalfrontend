@@ -1,0 +1,98 @@
+/* HERO */
+.tour-hero {
+  height: 60vh;
+  background: url('/assets/tour/clinic-banner.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6%;
+  color: #fff;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  max-width: 500px;
+}
+
+/* INTRO */
+.tour-intro {
+  padding: 70px 6%;
+  background: #f7fbfa;
+  text-align: center;
+}
+
+.tour-intro h2 {
+  color: #204d4a;
+  margin-bottom: 16px;
+}
+
+.tour-intro p {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  color: #5f7f7b;
+}
+
+/* GALLERY */
+.tour-gallery {
+  padding: 60px 6%;
+  background: #ffffff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* CTA */
+.tour-cta {
+  padding: 80px 6%;
+  background: linear-gradient(135deg, #2e8b84, #1f5f5a);
+  color: white;
+  text-align: center;
+}
+
+.tour-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: #2e8b84;
+  font-size: 1rem;
+  cursor: pointer;
+}

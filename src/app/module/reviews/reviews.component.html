@@ -1,0 +1,40 @@
+<section class="reviews-hero">
+  <h1>Patient Reviews</h1>
+  <p>Real Experiences from Our Patients</p>
+</section>
+
+<section class="rating-summary">
+  <h2>★★★★★ 4.9 / 5</h2>
+  <span>Based on Google Reviews</span>
+</section>
+
+<section class="slider-wrapper">
+
+  <!-- LEFT BUTTON -->
+  <button class="nav left" (click)="slideLeft()">❮</button>
+
+  <!-- SLIDER -->
+  <div class="reviews-slider" #slider>
+    <div class="review-card" *ngFor="let r of reviews">
+      <div class="stars">
+        <i class="fa fa-star" *ngFor="let s of stars(r.rating)"></i>
+      </div>
+
+      <p class="comment">“{{ r.comment }}”</p>
+
+      <h4>{{ r.name }}</h4>
+      <span class="time">{{ r.time }}</span>
+    </div>
+  </div>
+
+  <!-- RIGHT BUTTON -->
+  <button class="nav right" (click)="slideRight()">❯</button>
+
+</section>
+
+<section class="google-cta">
+  <h3>Read More on Google Reviews</h3>
+  <button>
+    <i class="fa fa-google"></i> View Google Reviews
+  </button>
+</section>

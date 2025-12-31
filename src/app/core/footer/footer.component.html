@@ -1,0 +1,82 @@
+<footer class="footer">
+  <div class="container pt-5">
+
+    <div class="row">
+
+      <!-- CLINIC -->
+      <div class="col-md-3 mb-4">
+        <img
+        *ngIf="footerData?.logo"
+        [src]="imageUrl + footerData.logo"
+          height="50"
+          class="rounded-circle mb-2">
+        <h6 class="mb-1">{{footerData?.clinicName}}</h6>
+        <p class="small">{{footerData?.tagline}}</p>
+      </div>
+
+      <!-- ADDRESS -->
+      <div class="col-md-3 mb-4">
+        <h6>Address</h6>
+       {{footerData?.address}}
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="col-md-3 mb-4">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled small">
+          <!-- <ul class="navbar-nav ms-auto align-items-lg-center"> -->
+
+           <li *ngFor="let link of footerData?.footerMenu">
+    <a
+      class="nav-link footer-link"
+      [routerLink]="link.route"
+    >
+      {{ link.title }}
+    </a>
+  </li>
+
+       
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="col-md-3 mb-4">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled small">
+          <li *ngFor="let s of footerData?.services">
+    <a
+      [routerLink]="s.route"
+      class="footer-link"
+    >
+      {{ s.name }}
+    </a>
+  </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <!-- SOCIAL -->
+    <div class="text-center mb-3">
+        <a
+    *ngFor="let s of footerData?.socialIcon"
+    [href]="s.url"
+    target="_blank"
+    rel="noopener"
+    class="social-icon me-3"
+  >
+    <i class="fa-brands fa-facebook-f" *ngIf="s.title === 'Facebook'"></i>
+    <i class="fa-brands fa-instagram" *ngIf="s.title === 'Instagram'"></i>
+    <!-- <i class="fa-brands fa-youtube" *ngIf="s.name === 'youtube'"></i> -->
+  </a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="text-center small pb-3">
+          {{footerData?.copyRights}}
+    </div>
+
+  </div>
+</footer>

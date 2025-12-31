@@ -1,0 +1,60 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+/* ===== Material theme ===== */
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$blue-grey-palette);
+$warn: mat.define-palette(mat.$red-palette);
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn
+  )
+));
+
+@include mat.core();
+@include mat.all-component-themes($theme);
+
+/* ===== Your custom styles AFTER ===== */
+
+/* Bootstrap overrides */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+:root {
+  --primary: #5A6F3C;        /* Trust Blue */
+  --primary-dark: #C2572D;
+  --secondary:#2F2A24;      /* Calm Teal */
+  --success: #25d366;        /* WhatsApp */
+  --card-accent: #F3C7AD;
+  --section:#E1E7D5;
+  --header:#d9e7c5;
+  --footer:#5A6F3C;
+  --main-bg:#FBF8F3;
+  --text-primary: #8c4f47;
+  --text-secondary: #e7b4a5;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(33, 52, 72, 0.6);
+}
+.page-wrapper {
+  padding-top: 72px; // header height
+}
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,54 @@
+.treatment-hero {
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6%;
+  color: #fff;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.doctor {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  margin-top: 25px;
+  width: fit-content;
+  padding: 14px 28px;
+  background: #2e8b84;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.treatment-content {
+  padding: 70px 6%;
+  background: var(--card-accent);
+}
+
+.treatment-content h2 {
+  color: #204d4a;
+  margin-bottom: 16px;
+}
+
+.treatment-content p {
+  max-width: 800px;
+  line-height: 1.8;
+  color: #5f7f7b;
+}

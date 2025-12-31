@@ -1,0 +1,24 @@
+<div
+  class="ba-container"
+  #slider
+  (mousemove)="move($event)"
+  (mouseup)="stopDrag()"
+  (mouseleave)="stopDrag()"
+  (touchmove)="move($event)"
+  (touchend)="stopDrag()"
+>
+  <img class="before" src="/assets/treatment-img/before1.jpg" />
+
+  <div class="after-wrapper" [style.width.%]="position">
+    <img class="after" src="/assets/treatment-img/after1.jpg" />
+  </div>
+
+  <div
+    class="slider-handle"
+    [style.left.%]="position"
+    (mousedown)="startDrag()"
+    (touchstart)="startDrag()"
+  >
+    <span></span>
+  </div>
+</div>

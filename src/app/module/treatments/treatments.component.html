@@ -1,0 +1,27 @@
+<section class="services-wrapper">
+  <h2 class="section-title">Our Dental Services</h2>
+  <p class="section-subtitle">
+    Advanced dentistry tailored for comfort, function, and aesthetics.
+  </p>
+
+  <div class="services-grid">
+    <div
+      class="service-card"
+      *ngFor="let service of services"
+      (click)="goToDetail(service.slug)"
+    >
+      <div class="image-wrap">
+        <img [src]="imageUrl + service.image" alt="{{ service.title }}" />
+      </div>
+
+      <div class="card-content">
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.longDesc }}</p>
+
+        <span class="view-link">
+          View Details →
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

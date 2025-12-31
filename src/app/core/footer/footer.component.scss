@@ -1,0 +1,44 @@
+.footer {
+  background:var(--secondary);
+  color: #cfd8dc;
+}
+
+.footer h6 {
+  color: var(--card-accent);
+  font-weight: 600;
+}
+
+.footer p,
+.footer li {
+  color: var(--header);
+}
+
+.footer-link {
+  color: var(--bg-light);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--card-accent);
+}
+
+.footer-divider {
+  border-top: 1px solid ;
+  color: var(--section);
+}
+
+.social-icon {
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  color: var(--primary-dark);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}

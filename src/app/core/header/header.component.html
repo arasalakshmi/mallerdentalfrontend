@@ -1,0 +1,69 @@
+<div class="main-header">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img
+         *ngIf="headerData?.logo"
+  [src]="imageUrl + headerData.logo"
+        height="42"
+        class="rounded-circle me-2"
+        alt="Maller Dental Clinic"
+      />
+      <span class="brand-text">
+        {{ headerData?.clinicName }}
+      </span>
+    </a>
+
+    <!-- TOGGLER -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENU -->
+   <div
+  class="collapse navbar-collapse"
+  id="mainNavbar"
+  #navbarCollapse>
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- <li class="nav-item"
+            *ngFor="let item of header.header">
+          <a
+            class="nav-link"
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            (click)="closeMenu()">
+            {{ item.label }}
+          </a>
+          
+
+          
+        </li>
+         -->
+         <li
+            class="nav-item"
+            *ngFor="let item of headerData?.navMenu">
+            <a
+              class="nav-link px-3"
+              [routerLink]="item.route"
+              routerLinkActive="active"
+              (click)="closeMenu()">
+              {{ item.title }}
+            </a>
+          </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+</div>

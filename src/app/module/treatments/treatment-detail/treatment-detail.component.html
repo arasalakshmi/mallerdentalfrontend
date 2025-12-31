@@ -1,0 +1,22 @@
+<section
+  class="treatment-hero"
+  [style.backgroundImage]="''"
+>
+  <div class="overlay">
+    <h1>{{ treatment.title }}</h1>
+    <p class="doctor">by {{ treatment.doctor }}</p>
+
+    <button class="cta-btn">
+      Book Consultation
+    </button>
+  </div>
+</section>
+
+<section class="treatment-content">
+  <h2>About the Treatment</h2>
+  <p>{{ treatment.description }}</p>
+   <app-slider
+    beforeImage="assets/before-after/before.jpg"
+    afterImage="assets/before-after/after.jpg"
+  ></app-slider>
+</section>
