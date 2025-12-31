@@ -13,7 +13,7 @@ export class HomeComponent {
 services: any[] = [];
 home:any;
 serviceChunks: any[][] = [];
-imageUrl = 'http://localhost:5000/';
+imageUrl = 'https://mallerdentalbackend.onrender.com/';
 
 constructor(private serviceApi: HomeService) {}
 

@@ -11,7 +11,7 @@ import { HeaderFooterService } from '../headerFooterService';
 export class FooterComponent {
   footerData: any;
  //navItems: NavItem[] = NAV_ITEMS;
-   imageUrl = 'http://localhost:5000/';
+   imageUrl = 'https://mallerdentalbackend.onrender.com/';
    
   
   constructor(private footerService: HeaderFooterService,private router:Router) {}

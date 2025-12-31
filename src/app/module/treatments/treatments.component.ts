@@ -9,7 +9,7 @@ import { TreatmentService } from './treatment.service';
 })
 export class TreatmentsComponent {
   services:any;
-  imageUrl = 'http://localhost:5000/';
+  imageUrl = 'https://mallerdentalbackend.onrender.com/';
   
 constructor(private router: Router, private treatment:TreatmentService) {}
 ngOnInit() {

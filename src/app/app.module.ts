@@ -11,7 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbotRoutingModule } from './module/about/about-routing.module';
 import { ReviewRoutingModule } from './module/reviews/reviews-routing.module';
 import { treatmentModule } from './module/treatments/treatments.module';
-import { AngularFireModule } from '@angular/fire/compat';
+//import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { HttpClientModule } from '@angular/common/http';
@@ -35,7 +35,7 @@ import { MaterialModule } from './material.module';
     AbotRoutingModule,
     ReviewRoutingModule,
     treatmentModule,
-    AngularFireModule.initializeApp(enviroment.firebase),
+   // AngularFireModule.initializeApp(enviroment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
    // AppointmentRoutingModule,

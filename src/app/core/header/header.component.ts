@@ -10,7 +10,7 @@ import { HeaderFooterService } from '../headerFooterService';
 export class HeaderComponent {
    headerData: any;
 //navItems: NavItem[] = NAV_ITEMS;
-  imageUrl = 'http://localhost:5000/';
+  imageUrl = 'https://mallerdentalbackend.onrender.com/';
   
   constructor(private headerService: HeaderFooterService) {}
  

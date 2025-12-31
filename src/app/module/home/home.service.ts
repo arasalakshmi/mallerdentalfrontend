@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class HomeService {
 
-  private apiUrl = 'http://localhost:5000/api/treatments';
-  private homeUrl ='http://localhost:5000/api/home'
+  private apiUrl = 'https://mallerdentalbackend.onrender.com/api/treatments';
+  private homeUrl ='https://mallerdentalbackend.onrender.com/api/home'
 
   constructor(private http: HttpClient) {}
 

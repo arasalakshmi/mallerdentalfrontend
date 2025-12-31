@@ -73,7 +73,7 @@ export class AppointmentComponent implements OnInit {
     if (this.appointmentForm.invalid) return;
 
     this.http.post(
-      'http://localhost:5000/api/appointments',
+      'https://mallerdentalbackend.onrender.com/api/appointments',
       this.appointmentForm.value
     ).subscribe({
       next: () => {

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TreatmentService {
 
-  private apiUrl = 'http://localhost:5000/api/treatments';
+  private apiUrl = 'https://mallerdentalbackend.onrender.com/api/treatments';
 
   constructor(private http: HttpClient) {}
 

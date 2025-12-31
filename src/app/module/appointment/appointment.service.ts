@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HeaderFooterService {
 
-  private apiUrl = 'http://localhost:5000/api/appointments';
+  private apiUrl = 'https://mallerdentalbackend.onrender.com/api/appointments';
 
   constructor(private http: HttpClient) {}
 
