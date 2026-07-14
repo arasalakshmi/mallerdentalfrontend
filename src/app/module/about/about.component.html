@@ -1,62 +1,359 @@
 <!-- HERO / CLINIC AMBIENCE -->
+<!-- Header Component -->
+
+<!-- Hero Section -->
+
 <section class="about-hero">
-  <div class="overlay"></div>
 
-  <div class="hero-content">
-    <h1>Maller Dental Clinic</h1>
-    <p>Ethical Dentistry Since 1998<br>R.S. Puram, Coimbatore</p>
+  <img
+    [src]="about?.headerImage"
+    class="hero-bg">
 
-    <button class="primary-btn" routerLink="/contact-us">
-      Book Online
-    </button>
-  </div>
-</section>
+  <div class="hero-overlay"></div>
 
-<!-- FOUNDERS -->
-<section class="founders">
-  <h2>Our Legacy</h2>
+  <div class="container">
 
-  <div class="founder-grid">
-    <div class="founder-card">
-      <div class="img-placeholder"></div>
-      <h3>Dr. Sudhakara V. Maller, MDS</h3>
-      <p>Founder Prosthodontist<br>Established 1998</p>
+    <div class="row align-items-center">
+
+      <!-- Left -->
+
+      <div class="col-lg-6">
+
+        <span class="section-tag">
+
+          About Us
+
+        </span>
+
+        <h1>
+
+          {{about?.heroTitle}}
+
+        </h1>
+
+        <h4>
+
+          {{about?.heroSubtitle}}
+
+        </h4>
+
+        <p>
+
+          {{about?.heroDescription}}
+
+        </p>
+
+        <div class="row g-3 mt-4">
+
+          <div
+            class="col-4"
+            *ngFor="let feature of about?.heroFeatures">
+
+            <div class="hero-feature">
+
+              <img
+                [src]="feature.icon">
+
+              <h6>
+
+                {{feature.title}}
+
+              </h6>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right -->
+
+      <div class="col-lg-6 text-center">
+
+        <img
+          [src]="about?.doctorHeroImage"
+          class="hero-doctor">
+
+      </div>
+
     </div>
 
-    <div class="founder-card">
-      <div class="img-placeholder"></div>
-      <h3>Dr. Udita S. Maller, MDS</h3>
-      <p>Co-Founder Prosthodontist<br>Established 1998</p>
-    </div>
   </div>
-</section>
 
-<!-- CURRENT OWNER -->
-<section class="owner">
-  <div class="owner-content">
-    <h2>Leading the Clinic Today</h2>
-    <p>
-      <strong>Dr. M. Thirumalai Velu, BDS</strong><br>
-      Chief Dental Surgeon 
+</section>
+<section class="doctor-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+
+Our Doctor
+
+</span>
+
+</div>
+
+<div class="doctor-card">
+
+<div class="row align-items-center">
+
+<div class="col-lg-4">
+
+<img
+[src]="about?.doctorImage"
+class="doctor-image">
+
+</div>
+
+<div class="col-lg-8">
+
+<h2>
+
+{{about?.doctorName}}
+
+</h2>
+
+<h5>
+
+{{about?.doctorQualification}}
+
+</h5>
+
+<div class="doctor-highlights">
+
+<div class="credential-card" *ngFor="let item of about.credentials">
+
+  <mat-icon>{{ item.icon }}</mat-icon>
+
+  <h6>{{ item.title }}</h6>
+
+  <p>{{ item.description }}</p>
+
+</div> 
+
+</div>
+
+<ul>
+
+<li
+*ngFor="let point of about?.doctorPoints">
+
+{{point}}
+
+</li>
+
+</ul>
+
+<div class="doctor-quote">
+
+{{about?.doctorQuote}}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="founders-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+
+Our Founders
+
+</span>
+
+<h2>
+
+The Legacy of Excellence
+
+</h2>
+
+</div>
+
+<div class="row">
+
+<div class="founder-card" *ngFor="let founder of about?.founders">
+
+  <img
+    [src]="founder.image"
+    [alt]="founder.name">
+
+  <div class="founder-content">
+
+    <h3>{{ founder.name }}</h3>
+
+    <h5>{{ founder.designation }}</h5>
+
+    <p class="qualification">
+
+      {{ founder.qualification }}
+
     </p>
 
-    <ul>
-      <li>BDS – Sri Ramakrishna Dental College, Coimbatore (2016)</li>
-      <li>10+ years of clinical experience</li>
-      <li>Owned since 2020</li>
-      <li>Practicing in the heart of Coimbatore</li>
-    </ul>
+    <div class="founder-icons">
+
+      <div
+        class="founder-icon"
+        *ngFor="let item of founder.icons">
+
+        <mat-icon>
+
+          {{ item.icon }}
+
+        </mat-icon>
+
+        <span>
+
+          {{ item.title }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+    <p>
+
+      {{ founder.description }}
+
+    </p>
+
   </div>
 
-  <div class="owner-card">
-    <img src="assets/doctor-home.jpg" alt="Dr Thirumalai Velu">
-  </div>
+</div>
+
+</div>
+
+</div>
+
 </section>
+<section class="timeline-section">
 
-<!-- CTA -->
+<div class="container">
+
+<div class="row">
+
+<div
+class="col-lg-4"
+
+*ngFor="let item of about?.timeline">
+
+<div class="timeline-card">
+
+<h3>
+
+{{item.year}}
+
+</h3>
+
+<p>
+
+{{item.title}}
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="credential-section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+
+Credentials & Expertise
+
+</span>
+
+</div>
+
+<div class="row">
+
+<div
+class="col-lg-2 col-6"
+
+*ngFor="let credential of about?.credentials">
+
+<div class="credential-card">
+
+<img
+[src]="credential.icon">
+
+<h6>
+
+{{credential.title}}
+
+</h6>
+
+<p>
+
+{{credential.description}}
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 <section class="about-cta">
-  <h2>Ready to Smile with Confidence?</h2>
-  <button class="secondary-btn" routerLink="/contact-us">
-    Book Online
-  </button>
+
+<div class="container">
+
+<div class="cta-card">
+
+<div>
+
+<h3>
+
+Your Smile is in Expert Hands
+
+</h3>
+
+<p>
+
+Experience the perfect blend of expertise and technology.
+
+</p>
+
+</div>
+
+<button
+mat-raised-button
+color="primary"
+routerLink="/appointment">
+
+Book Appointment
+
+</button>
+
+</div>
+
+</div>
+
 </section>

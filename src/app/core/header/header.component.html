@@ -35,33 +35,37 @@
   #navbarCollapse>
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
-        <!-- <li class="nav-item"
-            *ngFor="let item of header.header">
-          <a
-            class="nav-link"
-            [routerLink]="item.route"
-            routerLinkActive="active"
-            (click)="closeMenu()">
-            {{ item.label }}
-          </a>
-          
+  <li
+    class="nav-item"
+    *ngFor="let item of headerData?.navMenu">
 
-          
-        </li>
-         -->
-         <li
-            class="nav-item"
-            *ngFor="let item of headerData?.navMenu">
-            <a
-              class="nav-link px-3"
-              [routerLink]="item.route"
-              routerLinkActive="active"
-              (click)="closeMenu()">
-              {{ item.title }}
-            </a>
-          </li>
+    <a
+      class="nav-link"
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      (click)="closeMenu()">
 
-      </ul>
+      {{item.title}}
+
+    </a>
+
+  </li>
+
+  <li class="ms-lg-4 mt-3 mt-lg-0">
+
+    <a
+      routerLink="/appointment"
+      class="appointment-btn">
+
+      <mat-icon>calendar_month</mat-icon>
+
+      Book Appointment
+
+    </a>
+
+  </li>
+
+</ul>
     </div>
 
   </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SeoService } from '../../../core/services/seo.service';
 
 @Component({
   selector: 'app-treatment-detail',
@@ -33,10 +34,21 @@ treatment: any;
     }
   };
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute,
+    private seo:SeoService
+  ) {}
 
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('slug');
     this.treatment = this.treatmentsData[slug!];
+    if (this.treatment) {
+  this.seo.update({
+    title: `${this.treatment.title} | Maller Dental Clinic, RS Puram, Coimbatore`,
+    description: this.treatment.description,
+    keywords: `${this.treatment.title}, Dentist in Coimbatore, Dental Clinic RS Puram`,
+    url: `https://mallerdentalfrontend.vercel.app/treatments/${slug}`,
+    image: `https://mallerdentalfrontend.vercel.app/${this.treatment.banner}`
+  });
+}
   }
 }

@@ -1,166 +1,452 @@
 <!-- ================= HERO VIDEO SECTION ================= -->
 
 <section class="hero-section">
-  <div class="container-fluid p-0">
-    <div class="ratio ratio-16x9 position-relative">
 
-      <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover">
-        <source [src]="imageUrl+ home?.heroVideo" type="video/mp4">
-      </video>
+  <img
+    [src]="home?.headerImage"
+    class="hero-bg"
+    alt="Maller Dental Clinic">
 
-      <div class="hero-overlay d-flex flex-column
-                  justify-content-center align-items-center
-                  text-center text-white">
-        <h1 class="fw-bold">{{home?.heroTitle}}</h1>
-        <p class="fs-5">{{home?.heroSubtitle}}</p>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-text">
+
+      <span class="hero-tag">
+        <span class="line"></span>
+        Your Smile, Our Priority
+      </span>
+
+      <h1>
+        {{ home?.heroTitle }}
+      </h1>
+
+      <p>
+        {{ home?.heroSubtitle }}
+      </p>
+
+      <div class="hero-buttons">
+
+        <button
+          mat-raised-button
+          color="primary"
+          routerLink="/appointment">
+
+          <mat-icon>calendar_month</mat-icon>
+          Book Appointment
+
+        </button>
+
+        <button
+          mat-stroked-button
+          class="explore-btn"
+          routerLink="/services">
+
+          Explore Treatments
+          <mat-icon>arrow_forward</mat-icon>
+
+        </button>
+
+      </div>
+
+      <div class="hero-experience">
+
+        <mat-icon>verified</mat-icon>
+
+        <span>
+          <strong>28+</strong> Years of Trusted Dental Care
+        </span>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 
 <!-- ================= FOUNDERS / DOCTORS ================= -->
-<section class="py-5 bg-light">
+<section class="treatment-section py-5">
+
   <div class="container">
-    <h2 class="text-center mb-4">Our Specialists</h2>
 
-    <div class="row justify-content-center">
+    <div class="row g-5">
 
-      <!-- Doctor 1 -->
-      <!-- <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card shadow-sm text-center h-100">
-          <img src="assets/images/doctors/doctor1.jpg" class="card-img-top">
-          <div class="card-body">
-            <h5 class="mb-1">Dr. Sudhakara Maller</h5>
-            <p class="text-muted mb-0">
-              MDS – Prosthodontist & Implantologist
-            </p>
-          </div>
-        </div>
-      </div> -->
+      <!-- LEFT SIDE -->
+      <div class="col-lg-6">
 
-      <!-- Doctor 2 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card shadow-sm text-center">
-          <img [src]="imageUrl+ home?.doctorImage" class="card-img-top">
-          <div class="card-body">
-            <h5 class="mb-1">{{home?.doctorName}}</h5>
-            <p class="text-muted mb-0">
-             {{home?.doctorQualification}} | {{home?.doctorPosition}}
-            </p>
-          </div>
-        </div>
-      </div>
+        <span class="section-tag">
+          Complete Care For Every Smile
+        </span>
 
-    </div>
-  </div>
-</section>
+        <h2 class="section-title">
+          Our Dental Treatments
+        </h2>
 
+        <div class="row g-4 mt-3">
 
-<!-- ================= DENTAL TREATMENTS ================= -->
-<section class="py-5">
-  <h2 class="text-center mb-4">Our Dental Treatments</h2>
-  <div class="container">
-    
+          <div
+            class="col-lg-3 col-md-4 col-6"
+            *ngFor="let service of services | slice:0:8">
 
-    <div
-      id="treatmentCarousel"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
+            <div class="treatment-card">
 
-        <div
-          class="carousel-item"
-          *ngFor="let chunk of serviceChunks; let i = index"
-          [class.active]="i === 0"
-        >
-          <div class="row g-3 justify-content-center">
+              <div class="icon-box">
 
-            <div
-              class="col-lg-3 col-md-4 col-6"
-              *ngFor="let service of chunk"
-            >
-              <div class="card treatment-card h-100 text-center shadow-sm">
-
-                <!-- IMAGE -->
                 <img
-                  [src]="imageUrl + service.image"
-                  class="image-wrapper"
-                  alt="{{ service.name }}"
-                >
-
-                <div class="card-body">
-                  <h6 class="fw-semibold mb-2">
-                    {{ service.name }}
-                  </h6>
-
-                  <p class="small text-muted">
-                    {{ service.shortDesc }}
-                  </p>
-
-                  <a
-                    [routerLink]="['/services', service.slug]"
-                    class="btn btn-outline-primary btn-sm"
-                  >
-                    View Details
-                  </a>
-                </div>
+                  [src]="service.homeImg"
+                  [alt]="service.name">
 
               </div>
+
+              <h6>
+
+                {{service.name}}
+
+              </h6>
+
             </div>
 
           </div>
+
+        </div>
+
+        <button
+          mat-raised-button
+          color="primary"
+          class="mt-4"
+          routerLink="/services">
+
+          View All Treatments
+
+          <mat-icon>arrow_forward</mat-icon>
+
+        </button>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div class="col-lg-6">
+
+        <div class="doctor-card">
+
+          <div class="doctor-content">
+
+            <span class="section-tag">
+              Expert Care You Can Trust
+            </span>
+
+            <h2>
+              About Our Doctor
+            </h2>
+
+            <h4>
+
+              {{home?.doctorName}}
+
+            </h4>
+
+            <p>
+
+              {{home?.doctorQualification}}
+
+              |
+
+              {{home?.doctorPosition}}
+
+            </p>
+
+            <ul>
+
+              <li>
+                15+ Years of Experience
+              </li>
+
+              <li>
+                Member of IDA & ISOI
+              </li>
+
+              <li>
+                Specialist in Painless Dental Care
+              </li>
+
+              <li>
+                Dedicated to Restoring Beautiful Smiles
+              </li>
+
+            </ul>
+
+            <button
+              mat-raised-button
+              color="primary">
+
+              View Profile
+
+            </button>
+
+          </div>
+
+          <div class="doctor-image">
+
+            <img
+              [src]="home?.doctorImage"
+              alt="Doctor">
+
+          </div>
+
         </div>
 
       </div>
 
-      <!-- Controls -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#treatmentCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon"></span>
-      </button>
+    </div>
 
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#treatmentCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon"></span>
-      </button>
+  </div>
+
+</section>
+<!-- =========== WHY CHOOSE US ========= -->
+<section class="why-section">
+
+    <div class="container">
+
+        <span class="section-tag">
+            Why Choose Us
+        </span>
+
+        <h2 class="section-title">
+            Advanced Care. Personal Touch.
+        </h2>
+
+        <div class="row why-row">
+
+            <div class="col-lg-3 col-6">
+
+                <div class="why-item">
+
+                    <mat-icon>verified_user</mat-icon>
+
+                    <h3>28+</h3>
+
+                    <p>Years Experience</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-6">
+
+                <div class="why-item">
+
+                    <mat-icon>groups</mat-icon>
+
+                    <h3>20K+</h3>
+
+                    <p>Happy Patients</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-6">
+
+                <div class="why-item">
+
+                    <mat-icon>medical_services</mat-icon>
+
+                    <h3>Modern</h3>
+
+                    <p>Technology</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-6">
+
+                <div class="why-item">
+
+                    <mat-icon>favorite_border</mat-icon>
+
+                    <h3>100%</h3>
+
+                    <p>Patient Satisfaction</p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
+
+</section>
+<section class="testimonial-section py-5">
+  <div class="container">
+
+    <span class="section-tag">Patient Testimonials</span>
+
+    <h2 class="section-title">
+      What Our Patients Say
+    </h2>
+
   </div>
 </section>
 
 
+<!-- ================= APPOINTMENT ================= -->
 
+<section class="appointment-section">
 
-<!-- ================= APPOINTMENT SECTION ================= -->
-<section class="py-5 bg-light">
   <div class="container">
 
-    <div class="row shadow rounded g-4 align-items-stretch">
+    <div class="appointment-wrapper">
 
-      <!-- Image -->
-      <div class="col-lg-6 p-3">
-        <img
-         [src]="imageUrl+ home?.splitImage"
-          class="split-image-wrapper"
-        />
-      </div>
-      <!-- Appointment Form -->
-     <div class="col-lg-6 p-5 bg-white">
-        <h3 class="mb-3">Book an Appointment</h3>
-        <app-appointment></app-appointment>
+      <div class="row g-0">
+
+        <!-- LEFT IMAGE -->
+        <div class="col-lg-4">
+
+          <div class="appointment-image">
+
+            <img
+              [src]="home?.splitImage"
+              alt="Clinic">
+
+          </div>
+
+        </div>
+
+        <!-- CENTER FORM -->
+        <div class="col-lg-5">
+
+          <div class="appointment-form">
+
+            <span class="section-tag">
+
+              Book Your Visit
+
+            </span>
+
+            <h2>
+
+              Book Appointment
+
+            </h2>
+
+            <p class="mb-4">
+
+              Schedule your dental consultation with our experienced team.
+
+            </p>
+
+            <app-appointment></app-appointment>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT CONTACT -->
+        <div class="col-lg-3">
+
+          <div class="contact-panel">
+
+            <h3>Visit Our Clinic</h3>
+
+            <div class="contact-box">
+
+              <mat-icon>location_on</mat-icon>
+
+              <div>
+
+                <h6>Address</h6>
+
+                <p>
+                  Maller Dental Clinic<br>
+                  R.S. Puram<br>
+                  Coimbatore
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="contact-box">
+
+              <mat-icon>schedule</mat-icon>
+
+              <div>
+
+                <h6>Working Hours</h6>
+
+                <p>
+
+                  Mon – Sat
+
+                  <br>
+
+                  9:00 AM – 8:00 PM
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="contact-box">
+
+              <mat-icon>call</mat-icon>
+
+              <div>
+
+                <h6>Phone</h6>
+
+                <p>
+
+                  {{home?.phone}}
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="contact-box">
+
+              <mat-icon>mail</mat-icon>
+
+              <div>
+
+                <h6>Email</h6>
+
+                <p>
+
+                  {{home?.email}}
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <button
+              mat-flat-button
+              color="primary"
+              class="w-100 mt-3">
+
+              Get Directions
+
+            </button>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
+
   </div>
+
 </section>

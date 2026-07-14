@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../../material.module';
 import { AppointmentModule } from '../appointment/appointment.module';
+import {ReviewModule} from '../reviews/reviews.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppointmentModule } from '../appointment/appointment.module';
     HomeRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-    AppointmentModule
+    AppointmentModule,
+    ReviewModule,
   ]
 })
 export class HomeModule {}

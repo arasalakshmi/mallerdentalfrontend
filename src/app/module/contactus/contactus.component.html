@@ -60,15 +60,16 @@
     <div class="contact-form">
 
       <h2>Send Us a Message</h2>
-
-      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+       <app-appointment></app-appointment>
+       
+      <!-- <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
         <input type="text" placeholder="Full Name" formControlName="name">
         <input type="email" placeholder="Email Address" formControlName="email">
         <input type="tel" placeholder="Phone Number" formControlName="phone">
         <textarea placeholder="Message" formControlName="message"></textarea>
 
         <button type="submit">Submit Enquiry</button>
-      </form>
+      </form> -->
 
     </div>
 

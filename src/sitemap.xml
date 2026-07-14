@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/about</loc>
+  </url>
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/treatments</loc>
+  </url>
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/treatments/dental-implants</loc>
+  </url>
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/treatments/root-canal-treatment</loc>
+  </url>
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/treatments/full-mouth-rehabilitation</loc>
+  </url>
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/testimonials</loc>
+  </url>
+
+  <url>
+    <loc>https://mallerdentalfrontend.vercel.app/contact</loc>
+  </url>
+
+</urlset>

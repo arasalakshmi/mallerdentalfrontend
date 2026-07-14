@@ -1,6 +1,7 @@
+
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-appointment',
@@ -8,8 +9,11 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrl: './appointment.component.scss'
 })
 export class AppointmentComponent implements OnInit {
-
+  @ViewChild(FormGroupDirective)
+   formDirective!: FormGroupDirective;
   timeSlots: string[] = [];
+  scriptURL='https://script.google.com/macros/s/AKfycby6_H31ZDT0hT737HQ6TxA7oMJMMdJUF04u5k-4IdpvXNQ5-nm3Zet1m9yIDbWerr4A/exec'
+  //subject="AppointmentEnquires"
 
   appointmentForm = this.fb.group({
     name: ['', Validators.required],
@@ -22,8 +26,8 @@ export class AppointmentComponent implements OnInit {
     ],
     email: ['', Validators.email],
     treatment: ['', Validators.required],
-    date: ['', Validators.required],
-    time: ['', Validators.required]
+    appointmentDate: ['', Validators.required],
+    appointmentTime: ['', Validators.required]
   });
 
   today = new Date();
@@ -71,14 +75,24 @@ export class AppointmentComponent implements OnInit {
   // 🚀 Submit form
   bookAppointment() {
     if (this.appointmentForm.invalid) return;
-
-    this.http.post(
-      'https://mallerdentalbackend.onrender.com/api/appointments',
-      this.appointmentForm.value
+    this.http.post(this.scriptURL,
+      JSON.stringify(this.appointmentForm.value),
+      {
+        headers:{'Content-Type': 'text/plain'}
+      }
     ).subscribe({
       next: () => {
         alert('Appointment booked successfully');
-        this.appointmentForm.reset();
+         this.formDirective.resetForm();
+
+      this.appointmentForm.reset({
+        name: '',
+        phone: '',
+        email: '',
+        treatment: '',
+        appointmentDate: null,
+        appointmentTime: ''
+      });
       },
       error: () => {
         alert('Something went wrong');

@@ -7,6 +7,7 @@ import { MaterialModule } from '../../material.module';
 
 import { ContactusComponent } from './contactus.component';
 import { ContactRoutingModule } from './contactus-routing.module';
+import { AppointmentModule } from '../appointment/appointment.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ContactRoutingModule } from './contactus-routing.module';
     ContactRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
+    AppointmentModule
   ]
 })
 export class ContactModule {}
