@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, DOCUMENT } from '@angular/core';
 // import { Validators } from '@angular/forms';
 // import { FormBuilder, FormGroup } from '@angular/forms';
 //import { HomeService } from './home.service';
 import { HOME_DATA } from './home.data';
 import { Services } from '../treatments/treatment-detail/treatment.data';
 import { SeoService } from '../../core/services/seo.service';
-import { DOCUMENT } from '@angular/common';
+
 import { Inject } from '@angular/core';
 
 @Component({
