@@ -12,41 +12,35 @@ import { AbotRoutingModule } from './module/about/about-routing.module';
 import { ReviewRoutingModule } from './module/reviews/reviews-routing.module';
 import { treatmentModule } from './module/treatments/treatments.module';
 //import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { HttpClientModule } from '@angular/common/http';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+// import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { enviroment } from '../enviroments/enviroment';
 import { SiteContentService } from './services/sitecontent.service';
 import { HeaderFooterService } from './core/headerFooterService';
 //import { AppointmentRoutingModule } from './module/appointment/appointment.routing-module';
 import { MaterialModule } from './material.module';
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    HomeRoutingModule,
-    AbotRoutingModule,
-    ReviewRoutingModule,
-    treatmentModule,
-   // AngularFireModule.initializeApp(enviroment.firebase),
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-   // AppointmentRoutingModule,
-    MaterialModule
-  ],
-  providers: [
-    provideClientHydration(),
-    provideAnimationsAsync(),
-    SiteContentService,
-    HeaderFooterService,
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        HomeRoutingModule,
+        AbotRoutingModule,
+        ReviewRoutingModule,
+        treatmentModule,
+        // AngularFireModule.initializeApp(enviroment.firebase),
+       // AngularFirestoreModule,
+        //AngularFireStorageModule,
+        // AppointmentRoutingModule,
+        MaterialModule], providers: [
+        provideClientHydration(),
+        provideAnimationsAsync(),
+        SiteContentService,
+        HeaderFooterService,
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule { }
