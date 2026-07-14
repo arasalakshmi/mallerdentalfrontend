@@ -3,9 +3,10 @@ import { SeoService } from '../../core/services/seo.service';
 import { ABOUT_DATA } from './about.data';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrl: './about.component.scss',
+    standalone: false
 })
 export class AboutComponent {
 

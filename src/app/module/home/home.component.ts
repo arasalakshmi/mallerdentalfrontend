@@ -10,9 +10,10 @@ import { DOCUMENT } from '@angular/common';
 import { Inject } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    standalone: false
 })
 export class HomeComponent {
 services: any[] = [];

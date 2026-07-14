@@ -4,9 +4,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-appointment',
-  templateUrl: './appointment.component.html',
-  styleUrl: './appointment.component.scss'
+    selector: 'app-appointment',
+    templateUrl: './appointment.component.html',
+    styleUrl: './appointment.component.scss',
+    standalone: false
 })
 export class AppointmentComponent implements OnInit {
   @ViewChild(FormGroupDirective)

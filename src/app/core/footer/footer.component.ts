@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { HeaderFooterService } from '../headerFooterService';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss',
+    standalone: false
 })
 export class FooterComponent {
   footerData: any;

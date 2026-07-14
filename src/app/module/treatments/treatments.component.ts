@@ -4,9 +4,10 @@ import { TreatmentService } from './treatment.service';
 import { SeoService } from '../../core/services/seo.service';
 
 @Component({
-  selector: 'app-treatments',
-  templateUrl: './treatments.component.html',
-  styleUrl: './treatments.component.scss'
+    selector: 'app-treatments',
+    templateUrl: './treatments.component.html',
+    styleUrl: './treatments.component.scss',
+    standalone: false
 })
 export class TreatmentsComponent {
   services:any;

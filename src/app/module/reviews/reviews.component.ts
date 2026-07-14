@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-reviews',
-  templateUrl: './reviews.component.html',
-  styleUrl: './reviews.component.scss'
+    selector: 'app-reviews',
+    templateUrl: './reviews.component.html',
+    styleUrl: './reviews.component.scss',
+    standalone: false
 })
 export class ReviewsComponent {
  @ViewChild('slider', { static: false }) slider!: ElementRef;

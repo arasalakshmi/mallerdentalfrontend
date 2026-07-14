@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrl: './slider.component.scss'
+    selector: 'app-slider',
+    templateUrl: './slider.component.html',
+    styleUrl: './slider.component.scss',
+    standalone: false
 })
 export class SliderComponent implements AfterViewInit {
 

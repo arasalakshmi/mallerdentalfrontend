@@ -3,9 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SeoService } from '../../core/services/seo.service';
 
 @Component({
-  selector: 'app-contactus',
-  templateUrl: './contactus.component.html',
-  styleUrl: './contactus.component.scss'
+    selector: 'app-contactus',
+    templateUrl: './contactus.component.html',
+    styleUrl: './contactus.component.scss',
+    standalone: false
 })
 export class ContactusComponent {
  contactForm!: FormGroup;

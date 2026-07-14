@@ -2,10 +2,11 @@ import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/co
 import { HeaderFooterService } from '../headerFooterService';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
-   encapsulation: ViewEncapsulation.None
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss',
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class HeaderComponent {
    headerData: any;

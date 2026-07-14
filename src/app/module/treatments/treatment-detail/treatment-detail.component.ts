@@ -3,9 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { SeoService } from '../../../core/services/seo.service';
 
 @Component({
-  selector: 'app-treatment-detail',
-  templateUrl: './treatment-detail.component.html',
-  styleUrl: './treatment-detail.component.scss'
+    selector: 'app-treatment-detail',
+    templateUrl: './treatment-detail.component.html',
+    styleUrl: './treatment-detail.component.scss',
+    standalone: false
 })
 export class TreatmentDetailComponent {
 treatment: any;

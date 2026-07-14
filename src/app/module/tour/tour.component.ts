@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { SeoService } from '../../core/services/seo.service';
 
 @Component({
-  selector: 'app-tour',
-  templateUrl: './tour.component.html',
-  styleUrl: './tour.component.scss'
+    selector: 'app-tour',
+    templateUrl: './tour.component.html',
+    styleUrl: './tour.component.scss',
+    standalone: false
 })
 export class TourComponent {
   constructor(private seo:SeoService){}
