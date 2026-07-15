@@ -1,18 +1,18 @@
 <div class="main-header">
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-  <div class="container">
+  <div class="container-fluid px-lg-4 px-3">
 
     <!-- LOGO -->
     <a class="navbar-brand d-flex align-items-center" routerLink="/">
       <img
-         *ngIf="headerData?.logo"
-  [src]="imageUrl + headerData.logo"
+         *ngIf="headerData.logo"
+  [src]="headerData.logo"
         height="42"
         class="rounded-circle me-2"
         alt="Maller Dental Clinic"
       />
       <span class="brand-text">
-        {{ headerData?.clinicName }}
+        {{ headerData.clinicName }}
       </span>
     </a>
 
@@ -33,36 +33,28 @@
   class="collapse navbar-collapse"
   id="mainNavbar"
   #navbarCollapse>
-      <ul class="navbar-nav ms-auto align-items-lg-center">
+   <ul class="navbar-nav ms-auto align-items-lg-center">
 
-  <li
-    class="nav-item"
-    *ngFor="let item of headerData?.navMenu">
+  <ng-container *ngFor="let item of headerData.navMenu">
 
-    <a
-      class="nav-link"
-      [routerLink]="item.route"
-      routerLinkActive="active"
-      (click)="closeMenu()">
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: item.route === '/home' }"
+        (click)="closeMenu()">
+        {{ item.title }}
+      </a>
+    </li>
 
-      {{item.title}}
-
-    </a>
-
-  </li>
+  </ng-container>
 
   <li class="ms-lg-4 mt-3 mt-lg-0">
-
-    <a
-      routerLink="/appointment"
-      class="appointment-btn">
-
+    <a routerLink="/appointment" class="appointment-btn">
       <mat-icon>calendar_month</mat-icon>
-
       Book Appointment
-
     </a>
-
   </li>
 
 </ul>

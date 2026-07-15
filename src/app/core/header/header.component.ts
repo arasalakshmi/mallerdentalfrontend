@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { HeaderFooterService } from '../headerFooterService';
+import { HEADER_DATA } from '../headerFooter.data';
 
 @Component({
     selector: 'app-header',
@@ -9,11 +10,9 @@ import { HeaderFooterService } from '../headerFooterService';
     standalone: false
 })
 export class HeaderComponent {
-   headerData: any;
-//navItems: NavItem[] = NAV_ITEMS;
-  imageUrl = 'https://mallerdentalbackend.onrender.com/';
+  headerData = HEADER_DATA;
   
-  constructor(private headerService: HeaderFooterService) {}
+  constructor() {}
  
 
   closeMenu() {
@@ -23,9 +22,10 @@ export class HeaderComponent {
     }
   }
   ngOnInit() {
-    this.headerService.getHeaderFooter().subscribe(res => {
-      this.headerData = res;
-    });
+    console.log(this.headerData)
+    // this.headerService.getHeaderFooter().subscribe(res => {
+    //   this.headerData = res;
+    // });
   }
 //  navItems: NavItem[] = NAV_ITEMS;
 //   mobileMenuOpen = false;

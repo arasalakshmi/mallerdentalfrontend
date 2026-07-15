@@ -1,36 +1,30 @@
 <footer class="footer">
 
-  <div class="container">
+  <div class="container-fluid px-lg-4 px-3">
 
     <div class="row gy-5">
 
-      <!-- LOGO -->
+      <!-- LOGO & ABOUT -->
       <div class="col-lg-3 col-md-6">
 
         <img
-          *ngIf="footerData?.logo"
-          [src]="imageUrl + footerData.logo"
+          [src]="footerData.logo"
           class="footer-logo"
-          alt="Logo">
+          alt="Maller Dental Clinic Logo">
 
         <p class="footer-about">
-
-          {{footerData?.tagline}}
-
+          {{ footerData.tagline }}
         </p>
 
         <div class="footer-social">
 
           <a
-            *ngFor="let s of footerData?.socialIcon"
-            [href]="s.url"
-            target="_blank">
+            *ngFor="let social of footerData.socialIcon"
+            [href]="social.url"
+            target="_blank"
+            rel="noopener">
 
-            <i class="fa-brands fa-facebook-f"
-               *ngIf="s.title=='Facebook'"></i>
-
-            <i class="fa-brands fa-instagram"
-               *ngIf="s.title=='Instagram'"></i>
+            <i [class]="social.icon"></i>
 
           </a>
 
@@ -45,12 +39,12 @@
 
         <ul>
 
-          <li *ngFor="let link of footerData?.footerMenu">
+          <li *ngFor="let link of footerData.footerMenu">
 
             <a
               [routerLink]="link.route">
 
-              {{link.title}}
+              {{ link.title }}
 
             </a>
 
@@ -67,12 +61,12 @@
 
         <ul>
 
-          <li *ngFor="let s of footerData?.services">
+          <li *ngFor="let service of footerData.services">
 
             <a
-              [routerLink]="s.route">
+              [routerLink]="service.route">
 
-              {{s.name}}
+              {{ service.name }}
 
             </a>
 
@@ -83,72 +77,71 @@
       </div>
 
       <!-- CONTACT -->
-      <!-- CONTACT -->
-<div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6">
 
-  <h5>Contact Us</h5>
+        <h5>Contact Us</h5>
 
-  <div class="footer-contact">
+        <div class="footer-contact">
 
-    <div class="contact-item">
+          <div class="contact-item">
 
-      <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-location-dot"></i>
 
-      <div>
+            <div>
 
-        <strong>Address</strong>
+              <strong>Address</strong>
 
-        <p>{{footerData?.address}}</p>
+              <p>{{ footerData.address }}</p>
+
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <div>
+
+              <strong>Phone</strong>
+
+              <p>{{ footerData.phone }}</p>
+
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <div>
+
+              <strong>Email</strong>
+
+              <p>{{ footerData.email }}</p>
+
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <div>
+
+              <strong>Working Hours</strong>
+
+              <p>{{ footerData.workingHours }}</p>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
-
-    </div>
-
-    <div class="contact-item">
-
-      <i class="fa-solid fa-phone"></i>
-
-      <div>
-
-        <strong>Phone</strong>
-
-        <p>{{footerData?.phone}}</p>
-
-      </div>
-
-    </div>
-
-    <div class="contact-item">
-
-      <i class="fa-solid fa-envelope"></i>
-
-      <div>
-
-        <strong>Email</strong>
-
-        <p>{{footerData?.email}}</p>
-
-      </div>
-
-    </div>
-
-    <div class="contact-item">
-
-      <i class="fa-solid fa-clock"></i>
-
-      <div>
-
-        <strong>Working Hours</strong>
-
-        <p>{{footerData?.workingHours}}</p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
 
     </div>
 
@@ -158,17 +151,25 @@
 
       <p>
 
-        {{footerData?.copyRights}}
+        {{ footerData.copyRights }}
 
       </p>
 
       <div>
 
-        <a href="#">Privacy Policy</a>
+        <a routerLink="/privacy-policy">
+
+          Privacy Policy
+
+        </a>
 
         <span>|</span>
 
-        <a href="#">Terms & Conditions</a>
+        <a routerLink="/terms-and-conditions">
+
+          Terms & Conditions
+
+        </a>
 
       </div>
 

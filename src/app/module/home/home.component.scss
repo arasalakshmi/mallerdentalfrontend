@@ -1,454 +1,4 @@
-// /* HERO */
-// .container{
-//   background-color: var(--main-bg);
-// }
-// .hero-section {
-//   position: relative;
-//   height: 90vh;
-//   min-height: 720px;
-//   overflow: hidden;
-// }
-// .appointment-section {
-//   background: #f8f7f4;
-//   padding: 90px 0;
-// }
 
-// .appointment-card {
-//   background: #fff;
-//   border-radius: 24px;
-//   overflow: hidden;
-//   box-shadow: 0 15px 40px rgba(0,0,0,.08);
-// }
-
-// .appointment-image,
-// .appointment-form,
-// .contact-panel {
-//   height: 100%;
-// }
-
-// .appointment-image img {
-//   width: 100%;
-//   height: 100%;
-//   min-height: 650px;
-//   object-fit: cover;
-// }
-
-// .appointment-form {
-//   padding: 45px;
-// }
-
-// .contact-panel {
-//   background: #596842;
-//   color: #fff;
-//   padding: 45px 30px;
-// }
-
-// .contact-panel h4 {
-//   margin-bottom: 35px;
-//   font-weight: 600;
-// }
-
-// .contact-item {
-//   display: flex;
-//   gap: 15px;
-//   margin-bottom: 30px;
-// }
-
-// .contact-item mat-icon {
-//   color: #d58d48;
-//   font-size: 28px;
-//   width: 28px;
-//   height: 28px;
-// }
-
-// .contact-item h6 {
-//   margin-bottom: 6px;
-//   color: #fff;
-// }
-
-// .contact-item p {
-//   margin: 0;
-//   color: rgba(255,255,255,.8);
-//   font-size: 14px;
-// }
-
-// .section-tag {
-//   color: #d58d48;
-//   font-weight: 600;
-// }
-
-// .appointment-form h2 {
-//   margin: 12px 0 30px;
-// }
-
-// @media (max-width: 991px) {
-
-//   .appointment-image img {
-//     min-height: 350px;
-//   }
-
-//   .appointment-form,
-//   .contact-panel {
-//     padding: 30px;
-//   }
-// }
-
-// // .hero-bg {
-// //   width: 100%;
-// //   height: 100%;
-// //   object-fit: cover;
-// // }
-// .hero-bg {
-//     animation: heroZoom 18s ease-in-out infinite alternate;
-// }
-
-// @keyframes heroZoom {
-//     from {
-//         transform: scale(1);
-//     }
-//     to {
-//         transform: scale(1.08);
-//     }
-// }
-// .hero-overlay {
-//   position: absolute;
-//   inset: 0;
-
-//   background:
-//       linear-gradient(
-//         90deg,
-//         rgba(34,40,25,.82) 0%,
-//         rgba(34,40,25,.65) 35%,
-//         rgba(34,40,25,.25) 65%,
-//         rgba(34,40,25,.05) 100%
-//       );
-// }
-
-// .hero-content {
-//   position: absolute;
-//   inset: 0;
-
-//   display: flex;
-//   align-items: center;
-// }
-
-// .hero-text {
-//   max-width: 620px;
-//   color: white;
-// }
-
-// .hero-tag {
-//   display: flex;
-//   align-items: center;
-//   gap: 12px;
-
-//   color: #E7A35C;
-//   font-weight: 600;
-//   margin-bottom: 18px;
-// }
-
-// .hero-tag .line {
-//   width: 40px;
-//   height: 2px;
-//   background: #E7A35C;
-// }
-
-// .hero-text h1 {
-//   font-size: clamp(2.8rem,5vw,4.8rem);
-//   line-height: 1.1;
-//   font-weight: 700;
-//   margin-bottom: 24px;
-// }
-
-// .hero-text p {
-//   font-size: 1.15rem;
-//   line-height: 1.8;
-//   color: rgba(255,255,255,.9);
-//   max-width: 520px;
-// }
-
-// .hero-buttons {
-//   display: flex;
-//   gap: 18px;
-//   margin-top: 40px;
-// }
-
-// .hero-buttons button {
-//   height: 56px;
-//   border-radius: 14px;
-//   padding: 0 28px;
-// }
-
-// .explore-btn {
-//   color: white !important;
-//   border: 1px solid rgba(255,255,255,.4);
-//   background: rgba(255,255,255,.12);
-//   backdrop-filter: blur(8px);
-// }
-
-// .hero-experience {
-//   margin-top: 35px;
-
-//   display: inline-flex;
-//   align-items: center;
-//   gap: 10px;
-
-//   padding: 14px 22px;
-
-//   background: rgba(255,255,255,.12);
-//   border: 1px solid rgba(255,255,255,.15);
-//   backdrop-filter: blur(12px);
-//   border-radius: 14px;
-// }
-// /* SPLIT SECTION IMAGE */
-// .split-image-wrapper {
-//   width: 100%;
-//   height: 860px;              /* 🔥 KEY FIX */
-//   overflow: hidden;
-//   border-radius: 12px;
-// }
-
-// .split-image-wrapper img {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-// /* DOCTOR CARD IMAGE FIX */
-// .card-img-top {
-//   height: 260px;          /* 🔥 FIX CARD HEIGHT */
-//   object-fit: cover;
-// }
-
-// .treatment-section{
-//     background:#fbfaf7;
-// }
-
-// .section-tag{
-
-//     color:#d58d48;
-//     font-weight:600;
-//     display:flex;
-//     align-items:center;
-//     gap:12px;
-// }
-
-// .section-tag::before{
-
-//     content:"";
-//     width:40px;
-//     height:2px;
-//     background:#d58d48;
-// }
-
-// .section-title{
-
-//     font-size:42px;
-//     margin-top:10px;
-//     margin-bottom:20px;
-// }
-
-// .treatment-card{
-
-//     background:white;
-//     border-radius:18px;
-//     padding:25px 15px;
-
-//     text-align:center;
-
-//     transition:.35s;
-
-//     border:1px solid #eee;
-
-//     height:100%;
-// }
-
-// .treatment-card:hover{
-
-//     transform:translateY(-8px);
-
-//     box-shadow:0 20px 40px rgba(0,0,0,.08);
-// }
-
-// .icon-box{
-
-//     width:70px;
-//     height:70px;
-
-//     margin:auto;
-
-//     display:flex;
-//     align-items:center;
-//     justify-content:center;
-// }
-
-// .icon-box img{
-
-//     width:55px;
-// }
-
-// .treatment-card h6{
-
-//     margin-top:18px;
-//     font-weight:600;
-// }
-
-// .doctor-card{
-
-//     background:white;
-
-//     border-radius:25px;
-
-//     overflow:hidden;
-
-//     display:flex;
-
-//     height:100%;
-
-//     box-shadow:0 15px 40px rgba(0,0,0,.08);
-// }
-
-// .doctor-content{
-
-//     flex:1;
-
-//     padding:40px;
-// }
-
-// .doctor-content h2{
-
-//     margin:15px 0;
-// }
-
-// .doctor-content h4{
-
-//     margin-top:25px;
-// }
-
-// .doctor-content ul{
-
-//     margin:25px 0;
-//     padding-left:18px;
-// }
-
-// .doctor-content li{
-
-//     margin-bottom:15px;
-// }
-
-// .doctor-image{
-
-//     display:flex;
-//     align-items:flex-end;
-// }
-
-// .doctor-image img{
-
-//     width:270px;
-// }
-// .why-section{
-
-//     padding:90px 0;
-
-//     background:#fdfbf8;
-
-//     text-align:center;
-// }
-
-// .why-row{
-
-//     margin-top:50px;
-// }
-
-// .why-item{
-
-//     padding:20px;
-
-//     border-right:1px solid #e5e5e5;
-// }
-
-// .why-item:last-child{
-
-//     border:none;
-// }
-
-// .why-item mat-icon{
-
-//     font-size:45px;
-
-//     width:45px;
-
-//     height:45px;
-
-//     color:#596842;
-
-//     margin-bottom:20px;
-// }
-
-// .why-item h3{
-
-//     font-size:40px;
-
-//     font-weight:700;
-
-//     margin-bottom:8px;
-// }
-
-// .why-item p{
-
-//     color:#666;
-// }
-
-
-// /* MOBILE TWEAKS */
-// @media (max-width: 768px) {
-//   .hero-section h1 {
-//     font-size: 1.8rem;
-//   }
-// }
-// /* HERO MOBILE FIX */
-// @media (max-width: 768px) {
-//   .hero-section {
-//     .ratio {
-//       --bs-aspect-ratio: 75%; /* shorter hero */
-//     }
-
-//     h1 {
-//       font-size: 1.6rem;
-//       line-height: 1.3;
-//       margin-bottom: 8px;
-//     }
-
-//     p {
-//       font-size: 0.95rem;
-//     }
-//   }
-// }
-// @media (max-width: 768px) {
-//   .card {
-//     margin-left: 8px;
-//     margin-right: 8px;
-//   }
-
-//   .card-img-top {
-//     height: 220px;
-//     object-fit: cover;
-//   }
-// }
-// @media (max-width: 768px) {
-//   .appointment-section img {
-//     height: 220px;
-//     border-radius: 8px;
-//   }
-
-//   mat-form-field {
-//     margin-bottom: 12px;
-//   }
-
-//   button[mat-raised-button] {
-//     padding: 12px;
-//     font-size: 1rem;
-//   }
-// }
 
 /* ==========================================
    HERO SECTION
@@ -534,6 +84,46 @@
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+}
+.treatment-section .mat-mdc-raised-button{
+
+    background:#596842!important;
+
+    color:#fff!important;
+
+    border-radius:12px;
+
+    padding:0 28px;
+
+    height:48px;
+
+    font-weight:600;
+
+    box-shadow:none;
+}
+
+.treatment-section .mat-icon{
+
+    margin-left:6px;
+}
+.doctor-card .mat-mdc-raised-button{
+
+    background:#596842!important;
+
+    color:#fff!important;
+
+    border-radius:12px;
+
+    height:46px;
+
+    padding:0 26px;
+
+    font-weight:600;
+
+    box-shadow:none;
+}
+.main-header{
+    position:fixed;
 }
 
 .hero-buttons button {
@@ -1109,110 +699,355 @@
 }
 
 //mobile
-@media (max-width:991px){
+/* ==========================================
+   TABLET (992px and below)
+========================================== */
 
-.hero-section{
-    height:700px;
-}
+@media (max-width: 991.98px) {
 
-.hero-text{
-    padding-top:90px;
+  /* HERO */
+
+  .hero-section{
+    min-height:650px;
+    height:auto;
+  }
+
+  .hero-content{
+    padding:140px 0 100px;
+  }
+
+  .hero-text{
+    max-width:100%;
     text-align:center;
     margin:auto;
-}
+    padding-top:0;
+  }
 
-.hero-buttons{
+  .hero-tag,
+  .hero-buttons,
+  .hero-experience{
     justify-content:center;
-}
+  }
 
-.hero-experience{
-    justify-content:center;
-}
+  .hero-text h1{
+    font-size:3rem;
+  }
 
-.hero-text h1{
-    font-size:2.6rem;
-}
+  .hero-text p{
+    margin-left:auto;
+    margin-right:auto;
+  }
 
-.hero-text p{
-    font-size:1rem;
-}
+  /* Treatments */
 
-}
-@media(max-width:991px){
+  .treatment-section{
+    padding:80px 0;
+  }
 
-.treatment-section{
-    padding:70px 0;
-}
+  .section-title{
+    font-size:2.2rem;
+  }
 
-.section-title{
-    font-size:2rem;
-}
-
-.doctor-card{
-
-    flex-direction:column-reverse;
-
+  .doctor-card{
+    flex-direction:column;
     min-height:auto;
-}
+    margin-top:50px;
+  }
 
-.doctor-image{
+  .doctor-content{
+    padding:40px 30px;
+  }
 
-    width:100%;
-    height:360px;
-}
+  .doctor-image img{
+    max-width:380px;
+    margin:20px auto 0;
+  }
 
-.doctor-image img{
+  /* Why */
 
-    max-height:340px;
-}
+  .why-section{
+    padding:80px 0;
+  }
 
-.doctor-content{
+  .why-item{
+    margin-bottom:30px;
+  }
 
-    padding:30px;
-}
-
-.icon-box{
-
-    width:70px;
-    height:70px;
-}
-
-.icon-box img{
-
-    width:42px;
-}
-
-}
-@media(max-width:991px){
-
-.why-section{
-    padding:70px 0;
-}
-
-.why-section .section-title{
-    font-size:2rem;
-    margin-bottom:35px;
-}
-
-.why-item{
-
-    padding:25px 15px;
-}
-
-.why-item::after{
+  .why-item::after{
     display:none;
+  }
+
+  /* Appointment */
+
+  .appointment-section{
+    padding:80px 0;
+  }
+
+  .appointment-image img{
+    min-height:420px;
+  }
+
+  .appointment-form{
+    padding:40px 30px;
+  }
+
+  .contact-panel{
+    border-left:none;
+    border-top:1px solid #ececec;
+    padding:35px 30px;
+  }
+
 }
 
-.why-item h3{
 
+/* ==========================================
+   MOBILE (767px and below)
+========================================== */
+
+@media (max-width:767.98px){
+
+  /* HERO */
+   .hero-section{
+      height:650px;
+      min-height:650px;
+  }
+
+  .hero-bg{
+      object-position:78% center;
+  }
+
+  .hero-overlay{
+      background:linear-gradient(
+          180deg,
+          rgba(26,35,22,.72) 0%,
+          rgba(26,35,22,.62) 55%,
+          rgba(26,35,22,.45) 100%
+      );
+  }
+
+  .hero-section{
+    min-height:auto;
+  }
+
+  .hero-content{
+    padding:130px 0 90px;
+  }
+
+  .hero-text{
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:2.4rem;
+    line-height:1.2;
+  }
+
+  .hero-text p{
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero-buttons button{
+    width:100%;
+    max-width:320px;
+  }
+
+  .hero-experience{
+    width:100%;
+    justify-content:center;
+  }
+
+  .hero-section::after{
+    height:70px;
+    bottom:-35px;
+  }
+
+  /* Treatments */
+
+  .treatment-section{
+    padding:70px 0;
+  }
+
+  .section-title{
+    font-size:1.9rem;
+    text-align:center;
+  }
+
+  .section-tag{
+    justify-content:center;
+    width:100%;
+  }
+
+  .treatment-card{
+    padding:22px 14px;
+  }
+
+  .treatment-card h6{
+    font-size:14px;
+  }
+
+  .treatment-section .mat-mdc-raised-button{
+    width:100%;
+  }
+.brand-text{
+
+    font-size:18px;
+
+    max-width:180px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+  /* Doctor */
+
+  .doctor-card{
+    flex-direction:column;
+    border-radius:20px;
+  }
+
+  .doctor-content{
+    padding:30px 22px;
+  }
+
+  .doctor-content h2{
+    font-size:1.8rem;
+  }
+
+  .doctor-content h4{
+    font-size:1.25rem;
+  }
+
+  .doctor-content button{
+    width:100%;
+  }
+
+  .doctor-image{
+    padding:20px;
+  }
+
+  .doctor-image img{
+    max-width:300px;
+    margin:0 auto;
+  }
+
+  /* Why */
+
+  .why-section{
+    padding:70px 0;
+  }
+
+  .why-section .section-title{
     font-size:2rem;
-}
+    margin-bottom:40px;
+  }
 
-.why-item mat-icon{
+  .why-item{
+    padding:20px 10px;
+  }
 
+  .why-item mat-icon{
     width:60px;
     height:60px;
-    font-size:30px;
+    font-size:32px;
+  }
+
+  .why-item h3{
+    font-size:2rem;
+  }
+
+  /* Appointment */
+
+  .appointment-wrapper{
+    border-radius:20px;
+  }
+
+  .appointment-image img{
+    min-height:280px;
+  }
+
+  .appointment-form{
+    padding:28px 20px;
+  }
+
+  .contact-panel{
+    padding:28px 20px;
+    border-left:none;
+    border-top:1px solid #ececec;
+  }
+
+  .contact-panel h3{
+    font-size:2rem;
+    margin-bottom:25px;
+    text-align:center;
+  }
+
+  .contact-box{
+    gap:14px;
+    margin-bottom:22px;
+  }
+
+  .contact-box mat-icon{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    font-size:20px;
+  }
+
+  .contact-box h6{
+    font-size:18px;
+  }
+
+  .contact-box p{
+    font-size:15px;
+    line-height:1.6;
+    word-break:break-word;
+  }
+
 }
+
+
+/* ==========================================
+   SMALL MOBILE (480px and below)
+========================================== */
+
+@media (max-width:480px){
+
+  .hero-text h1{
+    font-size:2rem;
+  }
+
+  .hero-buttons button{
+    height:52px;
+  }
+
+  .icon-box{
+    width:56px;
+    height:56px;
+  }
+
+  .icon-box img{
+    width:36px;
+    height:36px;
+  }
+
+  .doctor-content{
+    padding:24px 18px;
+  }
+
+  .appointment-form{
+    padding:22px 16px;
+  }
+
+  .contact-panel{
+    padding:22px 16px;
+  }
 
 }

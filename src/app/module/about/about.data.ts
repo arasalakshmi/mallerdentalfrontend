@@ -1,100 +1,220 @@
 export const ABOUT_DATA = {
-   heroTitle: "Where Quality Meets Excellence",
-   heroSubtitle: "Advanced Dental Care for Your Perfect Smile",
-   bannerTitle: 'Welcome to Maller Dental Clinic',
-   bannerSubtitle: 'Healthy Smile, Happy Life',
-    heroVideo: 'assets/images/homeImg/hero.mp4',
-   heroImage: 'assets/images/homeImg/logo.png',
-   doctorName: "Dr. Thirumalai Velu M",
-  doctorQualification: "BDS",
-  doctorPosition: "Chief Dental Surgeon",
-  headerImage: 'assets/images/homeImg/headerImg.png',
-  doctorImage:'assets/images/homeImg/docImg.png',
-  splitImage: 'assets/images/homeImg/clinicImg.png',
-  doctorHighlights: [
-  '15+ Years of Experience',
-  'Dental Implant Specialist',
-  'Advanced Cosmetic Dentistry',
-  'Patient-Centered Care',
-  'Modern Digital Equipment',
-  'Gentle & Painless Treatments'
-],
-credentials : [
-  {
-    title: '10+ Years',
-    description: 'Clinical Experience',
-    icon: 'workspace_premium'
-  },
-  {
-    title: 'BDS',
-    description: 'Dental Surgeon',
-    icon: 'medical_services'
-  },
-  {
-    title: 'IDA Member',
-    description: 'Indian Dental Association',
-    icon: 'verified'
-  },
-  {
-    title: 'Modern Equipment',
-    description: 'Advanced Technology',
-    icon: 'biotech'
-  },
-  {
-    title: 'Patient Care',
-    description: 'Painless Dentistry',
-    icon: 'favorite'
-  }
-],
-founders: [
-  {
-    name: "Dr. Sudhakar V Maller",
-    designation: "Founder",
-    qualification: "MDS, Dental Surgeon",
-    image: "assets/about/founder1.webp",
-
+  // ================= HERO =================
+  hero: {
+    tag: 'About Us',
+    title: 'Trusted Care. Experienced Hands.',
+    subtitle: 'Where Quality Meets Excellence',
     description:
-      "Established Maller Dental Clinic with a vision to provide ethical, affordable, and quality dental care to every patient.",
+      'For over 20 years, Maller Dental Clinic has been committed to providing advanced, painless and ethical dental care with a personalized touch. Every smile we create reflects our passion for excellence and patient-first care.',
 
-    icons: [
+    image: 'assets/images/homeImg/headerImg.png',
+    doctorImage: 'assets/images/homeImg/docImg.png',
+
+    highlights: [
       {
-        icon: "workspace_premium",
-        title: "Founder"
+        icon: 'medical_services',
+        title: 'Advanced Technology'
       },
       {
-        icon: "medical_services",
-        title: "Dental Surgeon"
+        icon: 'groups',
+        title: 'Patient First'
       },
       {
-        icon: "verified",
-        title: "35+ Years Experience"
+        icon: 'verified_user',
+        title: 'Safe & Painless'
       }
     ]
   },
 
-  {
-    name: "Dr. Udita V Maller",
-    designation: "Founder",
-    qualification: "MDS, Dental Surgeon",
-    image: "assets/about/founder2.webp",
+  // ================= CURRENT DOCTOR =================
+  currentDoctor: {
+    sectionTitle: 'Our Doctor',
 
-    description:
-      "Dedicated to patient-focused dentistry with compassionate care and modern treatment approaches.",
+    image: 'assets/images/homeImg/docImg.png',
 
-    icons: [
+    name: 'Dr. Thirumalai Velu',
+
+    designation: 'BDS | Dental Surgeon',
+
+    stats: [
       {
-        icon: "favorite",
-        title: "Patient Care"
+        icon: 'person',
+        title: '10+',
+        subtitle: 'Years Experience'
       },
       {
-        icon: "school",
-        title: "Dental Expert"
+        icon: 'medical_services',
+        title: 'Specialist',
+        subtitle: 'Root Canal & TMJ'
       },
       {
-        icon: "emoji_events",
-        title: "Clinical Excellence"
+        icon: 'sentiment_satisfied',
+        title: 'Painless',
+        subtitle: 'Comfortable Care'
+      },
+      {
+        icon: 'verified',
+        title: 'IDA',
+        subtitle: 'Active Member'
       }
-    ]
+    ],
+
+    achievements: [
+      'Graduated from Ramakrishna Dental College & Hospital, Coimbatore (2016)',
+      'Specialist in Root Canal Treatment, TMJ Disorders & Pain Management',
+      'Expertise in painless and advanced dental care',
+      'Uses modern technology and sterilization protocols',
+      'Committed to ethical, precise and patient-friendly treatment',
+      'Active Member of Indian Dental Association (IDA)'
+    ],
+
+    quote:
+      'My goal is simple – to provide gentle, honest and high-quality dental care that helps every patient smile with confidence.',
+
+    signature: 'Dr. Thiru'
+  },
+
+  // ================= FOUNDERS =================
+  foundersTitle: 'Our Founders',
+
+  foundersSubtitle: 'The Legacy of Excellence',
+
+  founders: [
+    {
+      name: 'Dr. Sudhakar V. Maller',
+
+      designation: 'MDS – Prosthodontist & Implantologist',
+
+      image: 'assets/images/about/founder-sudhakar.webp',
+
+      qualification:
+        'Visionary Founder of Maller Dental Clinic',
+
+      description:
+        'Established Maller Dental Clinic in 1998 with the vision of delivering ethical, advanced and compassionate dental care to every patient.',
+
+      icons: [
+        {
+          icon: 'workspace_premium',
+          title: 'Founder'
+        },
+        {
+          icon: 'school',
+          title: 'MDS'
+        },
+        {
+          icon: 'verified',
+          title: 'Expert'
+        }
+      ]
+    },
+
+    {
+      name: 'Dr. Udita V. Maller',
+
+      designation: 'MDS – Prosthodontist & Smile Designer',
+
+      image: 'assets/images/about/founder-udita.webp',
+
+      qualification:
+        'Co-Founder & Smile Designer',
+
+      description:
+        'Known for her gentle approach and expertise in smile design, inspiring patient-first care for thousands of happy smiles.',
+
+      icons: [
+        {
+          icon: 'favorite',
+          title: 'Smile Design'
+        },
+        {
+          icon: 'workspace_premium',
+          title: 'Co-Founder'
+        },
+        {
+          icon: 'verified',
+          title: 'Expert'
+        }
+      ]
+    }
+  ],
+
+  // ================= TIMELINE =================
+  timeline: [
+    {
+      icon: 'event',
+      year: '1998',
+      title: 'Clinic Established',
+      description:
+        'Maller Dental Clinic was founded by Dr. Sudhakar V. Maller & Dr. Udita V. Maller.'
+    },
+
+    {
+      icon: 'verified_user',
+      year: '20+',
+      title: 'Years of Excellence',
+      description:
+        'Trusted dental care with thousands of happy smiles and long-term patient relationships.'
+    },
+
+    {
+      icon: 'groups',
+      year: '2020',
+      title: 'New Leadership',
+      description:
+        'Dr. Thirumalai Velu took over the clinic and continues the legacy with modern dentistry.'
+    }
+  ],
+
+  // ================= CREDENTIALS =================
+  credentialsTitle: 'Credentials & Expertise',
+
+  credentials: [
+    {
+      icon: 'school',
+      title: 'BDS',
+      description:
+        'Ramakrishna Dental College & Hospital, Coimbatore (2016)'
+    },
+
+    {
+      icon: 'medical_services',
+      title: 'Specialist',
+      description:
+        'Root Canal Treatment & TMJ Disorders'
+    },
+
+    {
+      icon: 'sentiment_satisfied',
+      title: 'Painless Dentistry',
+      description:
+        'Advanced techniques for comfortable care'
+    },
+
+    {
+      icon: 'desktop_windows',
+      title: 'Modern Technology',
+      description:
+        'Digital X-Ray, Rotary Endodontics & Apex Locator'
+    },
+
+    {
+      icon: 'groups',
+      title: 'IDA Member',
+      description:
+        'Active Member of Indian Dental Association'
+    }
+  ],
+
+  // ================= CTA =================
+  cta: {
+    title: 'Your Smile is in Expert Hands',
+
+    subtitle:
+      'Experience the perfect blend of expertise, technology and compassionate dental care.',
+
+    buttonText: 'Book an Appointment',
+
+    buttonLink: '/appointment'
   }
-]
 };

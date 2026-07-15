@@ -1,64 +1,305 @@
-<!-- HERO / CLINIC AMBIENCE -->
-<!-- Header Component -->
-
-<!-- Hero Section -->
+<!-- ================= HERO SECTION ================= -->
 
 <section class="about-hero">
 
   <img
-    [src]="about?.headerImage"
-    class="hero-bg">
+    class="hero-bg"
+    [src]="about.hero.image"
+    [alt]="about.hero.title">
 
   <div class="hero-overlay"></div>
 
   <div class="container">
 
-    <div class="row align-items-center">
+    <div class="hero-content">
 
-      <!-- Left -->
+      <span class="section-tag">
+        {{ about.hero.tag }}
+      </span>
 
-      <div class="col-lg-6">
+      <h1>
+        {{ about.hero.title }}
+      </h1>
 
-        <span class="section-tag">
+      <h4>
+        {{ about.hero.subtitle }}
+      </h4>
 
-          About Us
+      <p>
+        {{ about.hero.description }}
+      </p>
 
-        </span>
+      <div class="hero-features">
 
-        <h1>
+        <div
+          class="hero-feature"
+          *ngFor="let feature of about.hero.highlights">
 
-          {{about?.heroTitle}}
+          <div class="feature-icon">
+            <mat-icon>{{ feature.icon }}</mat-icon>
+          </div>
 
-        </h1>
+          <h6>{{ feature.title }}</h6>
 
-        <h4>
+        </div>
 
-          {{about?.heroSubtitle}}
+      </div>
 
-        </h4>
+    </div>
 
-        <p>
+  </div>
 
-          {{about?.heroDescription}}
+  <div class="hero-curve">
+    <svg viewBox="0 0 1440 170" preserveAspectRatio="none">
+      <path
+        d="M0,120 C350,20 1090,20 1440,120 L1440,170 L0,170 Z"
+        fill="#FBF8F3">
+      </path>
+    </svg>
+  </div>
 
-        </p>
+</section>
 
-        <div class="row g-3 mt-4">
+<!-- ================= CURRENT DOCTOR ================= -->
 
-          <div
-            class="col-4"
-            *ngFor="let feature of about?.heroFeatures">
+<section class="doctor-section">
 
-            <div class="hero-feature">
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+
+        {{ about.currentDoctor.sectionTitle }}
+
+      </span>
+
+    </div>
+
+    <div class="doctor-card">
+
+      <div class="row align-items-center">
+
+        <!-- Doctor Image -->
+
+        <div class="col-lg-4">
+
+          <div class="doctor-image-wrapper">
+
+            <img
+              class="doctor-image"
+              [src]="about.currentDoctor.image"
+              [alt]="about.currentDoctor.name">
+
+          </div>
+
+        </div>
+
+        <!-- Doctor Details -->
+
+        <div class="col-lg-8">
+
+          <h2>
+
+            {{ about.currentDoctor.name }}
+
+          </h2>
+
+          <h5>
+
+            {{ about.currentDoctor.designation }}
+
+          </h5>
+
+          <!-- Stats -->
+
+          <div class="doctor-highlights">
+
+            <div
+              class="highlight-card"
+              *ngFor="let stat of about.currentDoctor.stats">
+
+              <mat-icon>
+
+                {{ stat.icon }}
+
+              </mat-icon>
+
+              <div>
+
+                <h6>
+
+                  {{ stat.title }}
+
+                </h6>
+
+                <p>
+
+                  {{ stat.subtitle }}
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Achievements -->
+
+          <ul class="doctor-list">
+
+            <li
+              *ngFor="let item of about.currentDoctor.achievements">
+
+              <mat-icon>
+
+                check
+
+              </mat-icon>
+
+              <span>
+
+                {{ item }}
+
+              </span>
+
+            </li>
+
+          </ul>
+
+          <!-- Quote -->
+
+          <div class="doctor-quote">
+
+            <mat-icon>
+
+              format_quote
+
+            </mat-icon>
+
+            <p>
+
+              {{ about.currentDoctor.quote }}
+
+            </p>
+
+            <h6>
+
+              {{ about.currentDoctor.signature }}
+
+            </h6>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FOUNDERS ================= -->
+
+<section class="founders-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+
+        {{ about.foundersTitle }}
+
+      </span>
+
+      <h2>
+
+        {{ about.foundersSubtitle }}
+
+      </h2>
+
+    </div>
+
+    <div class="row g-4">
+
+      <div
+        class="col-lg-6"
+        *ngFor="let founder of about.founders">
+
+        <div class="founder-card">
+
+          <div class="row align-items-center">
+
+            <!-- Image -->
+
+            <div class="col-md-5">
 
               <img
-                [src]="feature.icon">
+                class="founder-image"
+                [src]="founder.image"
+                [alt]="founder.name">
 
-              <h6>
+            </div>
 
-                {{feature.title}}
+            <!-- Content -->
 
-              </h6>
+            <div class="col-md-7">
+
+              <div class="founder-content">
+
+                <h3>
+
+                  {{ founder.name }}
+
+                </h3>
+
+                <h5>
+
+                  {{ founder.designation }}
+
+                </h5>
+
+                <p class="qualification">
+
+                  {{ founder.qualification }}
+
+                </p>
+
+                <!-- Icons -->
+
+                <div class="founder-icons">
+
+                  <div
+                    class="founder-icon"
+                    *ngFor="let icon of founder.icons">
+
+                    <mat-icon>
+
+                      {{ icon.icon }}
+
+                    </mat-icon>
+
+                    <span>
+
+                      {{ icon.title }}
+
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <p class="description">
+
+                  {{ founder.description }}
+
+                </p>
+
+              </div>
 
             </div>
 
@@ -68,292 +309,185 @@
 
       </div>
 
-      <!-- Right -->
-
-      <div class="col-lg-6 text-center">
-
-        <img
-          [src]="about?.doctorHeroImage"
-          class="hero-doctor">
-
-      </div>
-
     </div>
 
   </div>
 
 </section>
-<section class="doctor-section">
+<!-- ================= TIMELINE ================= -->
 
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Our Doctor
-
-</span>
-
-</div>
-
-<div class="doctor-card">
-
-<div class="row align-items-center">
-
-<div class="col-lg-4">
-
-<img
-[src]="about?.doctorImage"
-class="doctor-image">
-
-</div>
-
-<div class="col-lg-8">
-
-<h2>
-
-{{about?.doctorName}}
-
-</h2>
-
-<h5>
-
-{{about?.doctorQualification}}
-
-</h5>
-
-<div class="doctor-highlights">
-
-<div class="credential-card" *ngFor="let item of about.credentials">
-
-  <mat-icon>{{ item.icon }}</mat-icon>
-
-  <h6>{{ item.title }}</h6>
-
-  <p>{{ item.description }}</p>
-
-</div> 
-
-</div>
-
-<ul>
-
-<li
-*ngFor="let point of about?.doctorPoints">
-
-{{point}}
-
-</li>
-
-</ul>
-
-<div class="doctor-quote">
-
-{{about?.doctorQuote}}
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<section class="founders-section">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="section-tag">
-
-Our Founders
-
-</span>
-
-<h2>
-
-The Legacy of Excellence
-
-</h2>
-
-</div>
-
-<div class="row">
-
-<div class="founder-card" *ngFor="let founder of about?.founders">
-
-  <img
-    [src]="founder.image"
-    [alt]="founder.name">
-
-  <div class="founder-content">
-
-    <h3>{{ founder.name }}</h3>
-
-    <h5>{{ founder.designation }}</h5>
-
-    <p class="qualification">
-
-      {{ founder.qualification }}
-
-    </p>
-
-    <div class="founder-icons">
-
-      <div
-        class="founder-icon"
-        *ngFor="let item of founder.icons">
-
-        <mat-icon>
-
-          {{ item.icon }}
-
-        </mat-icon>
-
-        <span>
-
-          {{ item.title }}
-
-        </span>
-
-      </div>
-
-    </div>
-
-    <p>
-
-      {{ founder.description }}
-
-    </p>
-
-  </div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 <section class="timeline-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="row">
+    <div class="timeline-wrapper">
 
-<div
-class="col-lg-4"
+      <div
+        class="timeline-card"
+        *ngFor="let item of about.timeline">
 
-*ngFor="let item of about?.timeline">
+        <div class="timeline-icon">
 
-<div class="timeline-card">
+          <mat-icon>
 
-<h3>
+            {{ item.icon }}
 
-{{item.year}}
+          </mat-icon>
 
-</h3>
+        </div>
 
-<p>
+        <div class="timeline-content">
 
-{{item.title}}
+          <h2>
 
-</p>
+            {{ item.year }}
 
-</div>
+          </h2>
 
-</div>
+          <h5>
 
-</div>
+            {{ item.title }}
 
-</div>
+          </h5>
+
+          <p>
+
+            {{ item.description }}
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+<!-- ================= CREDENTIALS ================= -->
+
 <section class="credential-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<span class="section-tag">
+      <span class="section-tag">
 
-Credentials & Expertise
+        {{ about.credentialsTitle }}
 
-</span>
+      </span>
 
-</div>
+    </div>
 
-<div class="row">
+    <div class="row g-4 justify-content-center">
 
-<div
-class="col-lg-2 col-6"
+      <div
+        class="col-xl col-lg-3 col-md-4 col-sm-6"
+        *ngFor="let credential of about.credentials">
 
-*ngFor="let credential of about?.credentials">
+        <div class="credential-card">
 
-<div class="credential-card">
+          <div class="credential-icon">
 
-<img
-[src]="credential.icon">
+            <mat-icon>
 
-<h6>
+              {{ credential.icon }}
 
-{{credential.title}}
+            </mat-icon>
 
-</h6>
+          </div>
 
-<p>
+          <h5>
 
-{{credential.description}}
+            {{ credential.title }}
 
-</p>
+          </h5>
 
-</div>
+          <p>
 
-</div>
+            {{ credential.description }}
 
-</div>
+          </p>
 
-</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+<!-- ================= CTA ================= -->
+
 <section class="about-cta">
 
-<div class="container">
+  <div class="container">
 
-<div class="cta-card">
+    <div class="cta-card">
 
-<div>
+      <div class="row align-items-center">
 
-<h3>
+        <div class="col-lg-8">
 
-Your Smile is in Expert Hands
+          <div class="cta-content">
 
-</h3>
+            <div class="cta-icon">
 
-<p>
+              <mat-icon>
 
-Experience the perfect blend of expertise and technology.
+                health_and_safety
 
-</p>
+              </mat-icon>
 
-</div>
+            </div>
 
-<button
-mat-raised-button
-color="primary"
-routerLink="/appointment">
+            <div>
 
-Book Appointment
+              <h2>
 
-</button>
+                {{ about.cta.title }}
 
-</div>
+              </h2>
 
-</div>
+              <p>
+
+                {{ about.cta.subtitle }}
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-4 text-lg-end text-center">
+
+          <a
+
+            mat-raised-button
+
+            color="primary"
+
+            class="cta-btn"
+
+            [routerLink]="about.cta.buttonLink">
+
+            {{ about.cta.buttonText }}
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>

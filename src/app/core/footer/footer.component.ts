@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { SiteContentService } from '../../services/sitecontent.service';
+
 import { Router } from '@angular/router';
-import { HeaderFooterService } from '../headerFooterService';
+import { FOOTER_DATA } from './footer.data';
 
 @Component({
     selector: 'app-footer',
@@ -10,17 +10,14 @@ import { HeaderFooterService } from '../headerFooterService';
     standalone: false
 })
 export class FooterComponent {
-  footerData: any;
- //navItems: NavItem[] = NAV_ITEMS;
-   imageUrl = 'https://mallerdentalbackend.onrender.com/';
+  footerData= FOOTER_DATA;
+ 
    
   
-  constructor(private footerService: HeaderFooterService,private router:Router) {}
+  constructor(private router:Router) {}
 
   ngOnInit(): void {
-   this.footerService.getHeaderFooter().subscribe(res => {
-      this.footerData = res;
-    });
+  
   }
   
    goToDetail(slug: string) {

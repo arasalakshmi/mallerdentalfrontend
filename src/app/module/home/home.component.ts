@@ -30,9 +30,9 @@ constructor(  @Inject(DOCUMENT) private document: Document,
 ngOnInit() {
  // this.loadServices();
   this.seo.update({
-    title: 'Maller Dental Clinic | Best Dental Clinic in RS Puram, Coimbatore',
-    description: 'Maller Dental Clinic offers dental implants, root canal treatment, braces, cosmetic dentistry, teeth cleaning and smile makeovers in RS Puram, Coimbatore.',
-    keywords: 'Dentist in Coimbatore, Dental Clinic RS Puram, Dental Implants, Root Canal, Braces',
+  title: 'Best Dental Clinic in RS Puram, Coimbatore | Maller Dental Clinic',
+description: 'Looking for the best dental clinic in RS Puram, Coimbatore? Maller Dental Clinic offers dental implants, root canal treatment, braces, cosmetic dentistry, teeth cleaning, smile makeovers, and expert dental care by experienced dentists.',
+keywords: 'best dental clinic in RS Puram, dentist in RS Puram, dental clinic Coimbatore, dental implants Coimbatore, root canal treatment RS Puram, braces treatment Coimbatore, cosmetic dentist Coimbatore, teeth cleaning RS Puram, smile makeover Coimbatore, Maller Dental Clinic',
     url: 'https://mallerdentalfrontend.vercel.app',
     image: 'https://www.mallerdentalfrontend.vercel.app/assets/images/logo.png'
   });

@@ -19,7 +19,7 @@
       </span>
 
       <h1>
-        {{ home?.heroTitle }}
+       {{ home.hero.title }}
       </h1>
 
       <p>
@@ -145,37 +145,25 @@
 
             <h4>
 
-              {{home?.doctorName}}
+              {{ home.doctor.name }}
 
             </h4>
 
             <p>
 
-              {{home?.doctorQualification}}
+              {{home.doctor.qualification}}
 
               |
 
-              {{home?.doctorPosition}}
+              {{home?.doctor.position}}
 
             </p>
 
             <ul>
 
-              <li>
-                15+ Years of Experience
-              </li>
-
-              <li>
-                Member of IDA & ISOI
-              </li>
-
-              <li>
-                Specialist in Painless Dental Care
-              </li>
-
-              <li>
-                Dedicated to Restoring Beautiful Smiles
-              </li>
+            <li *ngFor="let item of home.doctor.highlights">
+  {{ item }}
+</li>
 
             </ul>
 
@@ -192,7 +180,7 @@
           <div class="doctor-image">
 
             <img
-              [src]="home?.doctorImage"
+              [src]="home.doctor.image"
               alt="Doctor">
 
           </div>
@@ -221,61 +209,22 @@
 
         <div class="row why-row">
 
-            <div class="col-lg-3 col-6">
+           <div
+  class="col-lg-3 col-6"
+  *ngFor="let item of home.whyChooseUs.items">
 
-                <div class="why-item">
+  <div class="why-item">
 
-                    <mat-icon>verified_user</mat-icon>
+    <mat-icon>{{ item.icon }}</mat-icon>
 
-                    <h3>28+</h3>
+    <h3>{{ item.value }}</h3>
 
-                    <p>Years Experience</p>
+    <p>{{ item.label }}</p>
 
-                </div>
+  </div>
 
-            </div>
+</div>
 
-            <div class="col-lg-3 col-6">
-
-                <div class="why-item">
-
-                    <mat-icon>groups</mat-icon>
-
-                    <h3>20K+</h3>
-
-                    <p>Happy Patients</p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-6">
-
-                <div class="why-item">
-
-                    <mat-icon>medical_services</mat-icon>
-
-                    <h3>Modern</h3>
-
-                    <p>Technology</p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-6">
-
-                <div class="why-item">
-
-                    <mat-icon>favorite_border</mat-icon>
-
-                    <h3>100%</h3>
-
-                    <p>Patient Satisfaction</p>
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -311,7 +260,7 @@
           <div class="appointment-image">
 
             <img
-              [src]="home?.splitImage"
+              [src]="home.appointment.image"
               alt="Clinic">
 
           </div>
@@ -348,100 +297,41 @@
         </div>
 
         <!-- RIGHT CONTACT -->
-        <div class="col-lg-3">
+      <!-- RIGHT CONTACT -->
+<div class="col-lg-3">
 
-          <div class="contact-panel">
+  <div class="contact-panel">
 
-            <h3>Visit Our Clinic</h3>
+    <h3>{{ home.contact.title }}</h3>
 
-            <div class="contact-box">
+    <div
+      class="contact-box"
+      *ngFor="let item of home.contact.items">
 
-              <mat-icon>location_on</mat-icon>
+      <mat-icon>{{ item.icon }}</mat-icon>
 
-              <div>
+      <div>
 
-                <h6>Address</h6>
+        <h6>{{ item.title }}</h6>
 
-                <p>
-                  Maller Dental Clinic<br>
-                  R.S. Puram<br>
-                  Coimbatore
-                </p>
+        <p [innerHTML]="item.value"></p>
 
-              </div>
+      </div>
 
-            </div>
+    </div>
 
-            <div class="contact-box">
+    <!-- <button
+      mat-flat-button
+      color="primary"
+      class="w-100 mt-3">
 
-              <mat-icon>schedule</mat-icon>
+      {{ home.contact.buttonText }}
 
-              <div>
+    </button> -->
 
-                <h6>Working Hours</h6>
+  </div>
 
-                <p>
-
-                  Mon – Sat
-
-                  <br>
-
-                  9:00 AM – 8:00 PM
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="contact-box">
-
-              <mat-icon>call</mat-icon>
-
-              <div>
-
-                <h6>Phone</h6>
-
-                <p>
-
-                  {{home?.phone}}
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="contact-box">
-
-              <mat-icon>mail</mat-icon>
-
-              <div>
-
-                <h6>Email</h6>
-
-                <p>
-
-                  {{home?.email}}
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <button
-              mat-flat-button
-              color="primary"
-              class="w-100 mt-3">
-
-              Get Directions
-
-            </button>
-
-          </div>
-
-        </div>
+</div>
 
       </div>
 
