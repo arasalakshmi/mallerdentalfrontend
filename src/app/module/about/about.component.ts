@@ -22,7 +22,7 @@ serviceChunks: any[][] = [];
 
 description: 'Learn about Maller Dental Clinic in RS Puram, Coimbatore. Meet our experienced dentists, discover our patient-first approach, modern dental technology, and commitment to ethical, high-quality dental care.',
 
-keywords: 'About Maller Dental Clinic, dentist in RS Puram, dental clinic Coimbatore, experienced dentists Coimbatore, ethical dental care, dental specialists RS Puram, Maller Dental Clinic',
+keywords: 'About Maller Dental Clinic, dentist in RS Puram, dental clinic Coimbatore, experienced dentists Coimbatore, ethical dental care, dental specialists RS Puram, Maller Dental Clinic, Dentist near me, dental clini in saibabacolony, dental clinic in vadavalli, Dental Clinic in RSPURAM, dental clinic in R.S.Puram, dental clinic in R.S PUram, best dental clinic in rspuram',
   url: 'https://mallerdentalfrontend.vercel.app/about'
 });
  this.about = ABOUT_DATA;

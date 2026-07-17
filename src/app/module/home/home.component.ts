@@ -31,8 +31,8 @@ ngOnInit() {
  // this.loadServices();
   this.seo.update({
   title: 'Best Dental Clinic in RS Puram, Coimbatore | Maller Dental Clinic',
-description: 'Looking for the best dental clinic in RS Puram, Coimbatore? Maller Dental Clinic offers dental implants, root canal treatment, braces, cosmetic dentistry, teeth cleaning, smile makeovers, and expert dental care by experienced dentists.',
-keywords: 'best dental clinic in RS Puram, dentist in RS Puram, dental clinic Coimbatore, dental implants Coimbatore, root canal treatment RS Puram, braces treatment Coimbatore, cosmetic dentist Coimbatore, teeth cleaning RS Puram, smile makeover Coimbatore, Maller Dental Clinic',
+description: 'Looking for the best dental clinic in RS Puram, Coimbatore? Maller Dental Clinic provides dental implants, root canal treatment, cosmetic dentistry, pediatric dentistry and family dental care with experienced dentists.',
+keywords: 'best dental clinic in rs puram,best dentist in rs puram,dentist in rs puram,dental clinic coimbatore,best dental clinic coimbatore,root canal treatment rs puram,dental implants coimbatore,cosmetic dentist coimbatore,family dentist rs puram, Maller Dental Clinic, Dental clinic in saibabacolony, dental clinic in Vadavalli, dental clinic in gandhipuram, dental clinic in RSPURAM, Dental clinic in R.S Puram, dental clinic in R.S. Puram',
     url: 'https://mallerdentalfrontend.vercel.app',
     image: 'https://www.mallerdentalfrontend.vercel.app/assets/images/logo.png'
   });
@@ -71,12 +71,12 @@ private addSchema(): void {
 
     "url": "https://mallerdentalfrontend.vercel.app",
 
-    "telephone": "+91XXXXXXXXXX",
+    "telephone": "+9194429 51313",
 
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "RS Puram",
-      "addressLocality": "RS PURAM, COIMBATORE",
+      "streetAddress": "First Floor, Gowtham Arcade, 48, Thiruvenkatasamy Rd W, opposite Corporation Kalaiarangam, East, RS. Puram, Coimbatore, Tamil Nadu 641002",
+      "addressLocality": "RS Puram, Coimbatore",
       "addressRegion": "Tamil Nadu",
       "postalCode": "641002",
       "addressCountry": "INDIA"

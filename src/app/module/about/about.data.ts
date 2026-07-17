@@ -85,7 +85,7 @@ export const ABOUT_DATA = {
 
       designation: 'MDS – Prosthodontist & Implantologist',
 
-      image: 'assets/images/about/founder-sudhakar.webp',
+      image: 'assets/images/abtImg/founder1.png',
 
       qualification:
         'Visionary Founder of Maller Dental Clinic',
@@ -114,7 +114,7 @@ export const ABOUT_DATA = {
 
       designation: 'MDS – Prosthodontist & Smile Designer',
 
-      image: 'assets/images/about/founder-udita.webp',
+      image: 'assets/images/abtImg/cofound.png',
 
       qualification:
         'Co-Founder & Smile Designer',

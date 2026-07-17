@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
-
+ import { TREATMENTS } from './appointment.data';
 @Component({
     selector: 'app-appointment',
     templateUrl: './appointment.component.html',
@@ -12,6 +12,10 @@ import { FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
 export class AppointmentComponent implements OnInit {
   @ViewChild(FormGroupDirective)
    formDirective!: FormGroupDirective;
+  
+
+
+treatments = TREATMENTS;
   timeSlots: string[] = [];
   scriptURL='https://script.google.com/macros/s/AKfycby6_H31ZDT0hT737HQ6TxA7oMJMMdJUF04u5k-4IdpvXNQ5-nm3Zet1m9yIDbWerr4A/exec'
   //subject="AppointmentEnquires"

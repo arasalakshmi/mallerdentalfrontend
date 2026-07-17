@@ -108,7 +108,12 @@ export const HOME_DATA = {
     subtitle:
       'Schedule your dental consultation with our experienced team.',
 
-    image: 'assets/images/homeImg/clinicImg.png'
+    image: 'assets/images/homeImg/clinicImg.png',
+      floatingCard: {
+    title: 'Need Help?',
+    phone: '+91 99949 99949',
+    icon: 'call'
+  }
 
   },
 
@@ -117,6 +122,7 @@ export const HOME_DATA = {
  contact: {
 
   title: 'Visit Our Clinic',
+  
 
   items: [
 

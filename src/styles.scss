@@ -6,6 +6,22 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
 
+/* ===== Material theme ===== */
+// $primary: mat.define-palette(mat.$indigo-palette);
+// $accent: mat.define-palette(mat.$blue-grey-palette);
+// $warn: mat.define-palette(mat.$red-palette);
+
+// $theme: mat.define-light-theme((
+//   color: (
+//     primary: $primary,
+//     accent: $accent,
+//     warn: $warn
+//   )
+// ));
+
+// @include mat.core();
+// @include mat.all-component-themes($theme);
+
 
 
 /* ===== Your custom styles AFTER ===== */
@@ -41,7 +57,43 @@ body {
 
 
 }
+/* ==========================================
+   DATE PICKER
+========================================== */
 
+.mat-mdc-datepicker-content{
+
+    border-radius:20px;
+
+}
+
+.mat-mdc-calendar-body-disabled{
+
+    color:#b5b5b5 !important;
+
+}
+
+.mat-calendar-body-disabled{
+
+    color:#b5b5b5 !important;
+
+}
+
+/* ==========================================
+   SELECT PANEL
+========================================== */
+
+.mat-mdc-select-panel{
+
+    border-radius:18px !important;
+
+}
+
+.mat-mdc-option{
+
+    min-height:48px;
+
+}
 
 .hero-overlay {
   position: absolute;

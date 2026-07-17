@@ -1,75 +1,121 @@
-<!-- Hero -->
+<!-- ==========================================
+ HERO SECTION
+========================================== -->
+
 <section class="contact-hero">
-  <div class="overlay">
-    <h1>Contact Us</h1>
-    <p>Your smile begins with a conversation</p>
+
+  <img
+    class="hero-image"
+    [src]="contact.hero.image"
+    [alt]="contact.hero.title">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <h1>{{ contact.hero.title }}</h1>
+
+    <div class="divider">
+      <span></span>
+      <mat-icon>spa</mat-icon>
+      <span></span>
+    </div>
+
+    <h3>{{ contact.hero.subtitle }}</h3>
+
+    <p>{{ contact.hero.description }}</p>
+
   </div>
+<div class="hero-curve">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path
+      fill="var(--main-bg)"
+      d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+    </path>
+  </svg>
+</div>
 </section>
 
-<!-- MAIN CONTAINER -->
-<section class="contact-page">
 
-  <div class="contact-container">
+<!-- ==========================================
+ CONTACT + APPOINTMENT
+========================================== -->
 
-    <!-- LEFT -->
-<div class="contact-info">
+<section class="contact-main">
 
- 
+  <div class="container">
 
-  <div class="info-box">
-    <div class="info-header">
-    <span class="icon">
-      <i class="fa-solid fa-map"></i>
-    </span>
-    <h3>Address</h3>
-  </div>
-   Maller Dental Clinic<br>
-   Goutham Arcade,1st floor, <br>
-   yesbank building,opposite snehalaya sliks<br>
-   East Tv samy road,Rspuram,coimbatore
+    <div class="contact-layout">
 
-  </div>
-   <div class="info-box">
-   <div class="info-header">
-    <span class="icon">
-      <i class="fa-solid fa-phone"></i>
-    </span>
-    <h3>Phone Number</h3>
-  </div>
-    <p>+91 94429 51313</p>
-  </div>
+      <!-- Left Side -->
+      <aside class="contact-info">
 
-  <div class="info-box">
-     <div class="info-header">
-    <span class="icon">
-      <i class="fa-solid fa-clock"></i>
-    </span>
-    <h3>Timings</h3>
-  </div>
-    <p>
-      Monday – Saturday<br>
-      10:30 AM – 6:30 PM<br>
-      Sunday: By Appointment
-    </p>
-  </div>
+        <span class="section-tag">Contact</span>
 
-</div>
+        <h2>Get in Touch</h2>
 
+        <div class="heading-divider">
+          <span></span>
+          <mat-icon>spa</mat-icon>
+          <span></span>
+        </div>
 
-    <!-- RIGHT -->
-    <div class="contact-form">
+        <p class="section-description">
+          We'd love to hear from you. Reach out through any of the options below.
+        </p>
 
-      <h2>Send Us a Message</h2>
-       <app-appointment></app-appointment>
-       
-      <!-- <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
-        <input type="text" placeholder="Full Name" formControlName="name">
-        <input type="email" placeholder="Email Address" formControlName="email">
-        <input type="tel" placeholder="Phone Number" formControlName="phone">
-        <textarea placeholder="Message" formControlName="message"></textarea>
+        <div
+          class="contact-card"
+          *ngFor="let card of contact.cards">
 
-        <button type="submit">Submit Enquiry</button>
-      </form> -->
+          <div class="card-icon">
+            <mat-icon>{{ card.icon }}</mat-icon>
+          </div>
+
+          <div class="card-content">
+
+            <h3>{{ card.title }}</h3>
+
+            <p *ngFor="let line of card.lines">
+              {{ line }}
+            </p>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+      <!-- Right Side -->
+      <section class="appointment-area">
+
+        <span class="section-tag">Appointment</span>
+
+        <h2>Book an Appointment</h2>
+
+        <div class="heading-divider">
+          <span></span>
+          <mat-icon>spa</mat-icon>
+          <span></span>
+        </div>
+
+        <p class="section-description">
+          Fill in the details below and we'll contact you shortly to confirm your appointment.
+        </p>
+
+        <app-appointment></app-appointment>
+
+        <div class="privacy-note">
+
+          <mat-icon>verified_user</mat-icon>
+
+          <span>
+            Your information is safe with us and will remain confidential.
+          </span>
+
+        </div>
+
+      </section>
 
     </div>
 
@@ -78,10 +124,88 @@
 </section>
 
 
-<!-- Map -->
+<!-- ==========================================
+ MAP SECTION
+========================================== -->
+
+<!-- ==========================================
+ MAP SECTION
+========================================== -->
+
 <section class="map-section">
-  <iframe
-    src="https://www.google.com/maps?q=RS%20Puram%20Coimbatore&output=embed"
-    loading="lazy">
-  </iframe>
+
+  <div class="container">
+
+    <div class="map-layout">
+
+      <!-- Map -->
+
+      <div class="map-frame">
+
+        <iframe
+          [src]="mapUrl"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+      <!-- Content -->
+
+      <div class="map-content">
+
+        <span class="section-tag">
+          Location
+        </span>
+
+        <h2>
+          {{ contact.map.title }}
+        </h2>
+
+        <div class="heading-divider">
+          <span></span>
+          <mat-icon>spa</mat-icon>
+          <span></span>
+        </div>
+
+        <p>
+          {{ contact.map.description }}
+        </p>
+
+        <ul>
+
+          <li>
+            <mat-icon>check_circle</mat-icon>
+            Prime Location in R.S. Puram
+          </li>
+
+          <li>
+            <mat-icon>check_circle</mat-icon>
+            Easy Parking Nearby
+          </li>
+
+          <li>
+            <mat-icon>check_circle</mat-icon>
+            Easy Google Navigation
+          </li>
+
+        </ul>
+
+        <a
+          class="direction-btn"
+          [href]="contact.map.directionsUrl"
+          target="_blank">
+
+          <mat-icon>directions</mat-icon>
+
+          {{ contact.map.buttonText }}
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>

@@ -55,17 +55,18 @@
 /* Left Content */
 
 .hero-content{
-
     position:absolute;
 
     top:50%;
     left:0;
 
-    //transform:translateY(-50%);
+    transform:translateY(10%);
 
     width:42%;
 
     max-width:560px;
+
+  
 }
 
 /* Tag */
@@ -853,16 +854,17 @@
   IMAGE
 =========================================================*/
 
-.founder-image{
 
-    width:100%;
 
-    border-radius:22px;
-
-    object-fit:cover;
-
-    transition:.4s;
+   
+   .founder-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 22px;
 }
+
 
 .founder-card:hover .founder-image{
 
@@ -883,7 +885,8 @@
     font-size:1.7rem;
 
     font-weight:800;
-
+//  min-height:96px;
+//     line-height:1.15;
     color:#2F2A24;
 
     margin-bottom:8px;

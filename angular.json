@@ -41,6 +41,7 @@
             ],
             "styles": [
               "src/styles.scss",
+               "@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
@@ -52,13 +53,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "6mb",
-                  "maximumError": "8mb"
+                  "maximumWarning": "12mb",
+                  "maximumError": "15mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "10kb",
-                  "maximumError": "15kb"
+                  "maximumWarning": "15kb",
+                  "maximumError": "25kb"
                 }
               ],
               "outputHashing": "all"
@@ -107,6 +108,7 @@
             ],
             "styles": [
               "src/styles.scss",
+               "@angular/material/prebuilt-themes/indigo-pink.css",
                "node_modules/bootstrap/dist/css/bootstrap.min.css",
                "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],

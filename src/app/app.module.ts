@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HomeRoutingModule } from './module/home/home-routing.module';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+//import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbotRoutingModule } from './module/about/about-routing.module';
@@ -36,9 +36,9 @@ import { MaterialModule } from './material.module';
        // AngularFirestoreModule,
         //AngularFireStorageModule,
         // AppointmentRoutingModule,
-        MaterialModule], providers: [
+        MaterialModule ], providers: [
         provideClientHydration(),
-        provideAnimationsAsync(),
+        //provideAnimationsAsync(),
         SiteContentService,
         HeaderFooterService,
         provideHttpClient(withInterceptorsFromDi()),

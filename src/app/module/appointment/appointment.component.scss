@@ -1,0 +1,73 @@
+/* ==========================================
+   APPOINTMENT FORM
+========================================== */
+
+:host{
+    display:block;
+}
+
+.appointment-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+mat-form-field{
+
+    width:100%;
+
+}
+
+.full-width{
+
+    grid-column:1/-1;
+
+}
+
+.appointment-btn{
+
+    grid-column:1/-1;
+
+    height:56px;
+
+    border-radius:18px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.4px;
+
+    margin-top:8px;
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:768px){
+
+.appointment-form{
+
+grid-template-columns:1fr;
+
+}
+
+.full-width{
+
+grid-column:auto;
+
+}
+
+.appointment-btn{
+
+grid-column:auto;
+
+}
+
+}

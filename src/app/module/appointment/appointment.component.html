@@ -1,8 +1,8 @@
-<div class="container">
-    <form
+
+   <form
+  class="appointment-form"
   [formGroup]="appointmentForm"
   (ngSubmit)="bookAppointment()"
-  class="p-4 shadow rounded bg-white"
 >
 
   <!-- NAME -->
@@ -30,10 +30,16 @@
   <mat-form-field class="w-100 mb-3">
     <mat-label>Treatment</mat-label>
     <mat-select formControlName="treatment">
-      <mat-option value="TMJ">TMJ</mat-option>
-      <mat-option value="Aligners">Aligners</mat-option>
-      <mat-option value="Implants">Implants</mat-option>
-    </mat-select>
+
+  <mat-option
+    *ngFor="let treatment of treatments"
+    [value]="treatment.value">
+
+    {{ treatment.name }}
+
+  </mat-option>
+
+</mat-select>
   </mat-form-field>
 
   <!-- DATE -->
@@ -61,16 +67,17 @@
   </mat-form-field>
 
   <!-- BUTTON -->
-  <button
+   <button
     mat-raised-button
     color="primary"
-    class="w-100"
+    class="appointment-btn"
     type="submit"
     [disabled]="appointmentForm.invalid"
   >
+
     Book Appointment
+
   </button>
 
 </form>
 
-</div>

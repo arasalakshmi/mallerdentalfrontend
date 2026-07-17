@@ -73,7 +73,7 @@ export const FOOTER_DATA = {
   ],
 
   address:
-    ' HEAD POST OFFICE, GOWTHAM ARCADE FIRST FLOOR 48, EAST, Thiruvenkatasamy Rd W, opposite CORPORATION KALAIARANGAM, near R.S.PURAM, R.S. Puram, Coimbatore, Tamil Nadu 641002',
+    ' HEAD POST OFFICE, GOWTHAM ARCADE FIRST FLOOR 48, EAST, Thiruvenkatasamy Rd W, opposite CORPORATION KALAIARANGAM, near R.S PURAM, R.S Puram, Coimbatore, Tamil Nadu 641002',
 
   phone:
     '+91 94429 51313',

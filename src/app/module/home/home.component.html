@@ -250,88 +250,105 @@
 
   <div class="container">
 
-    <div class="appointment-wrapper">
+    <div class="appointment-layout">
 
-      <div class="row g-0">
+      <!-- Left Image -->
+      <div class="appointment-image">
 
-        <!-- LEFT IMAGE -->
-        <div class="col-lg-4">
+        <img
+          [src]="home.appointment.image"
+          alt="Maller Dental Clinic">
 
-          <div class="appointment-image">
+        <div class="floating-card">
 
-            <img
-              [src]="home.appointment.image"
-              alt="Clinic">
+          <mat-icon>call</mat-icon>
 
+          <div>
+            <span>Need Help?</span>
+            <h4>{{ home.appointment.floatingCard.phone }}</h4>
           </div>
 
         </div>
-
-        <!-- CENTER FORM -->
-        <div class="col-lg-5">
-
-          <div class="appointment-form">
-
-            <span class="section-tag">
-
-              Book Your Visit
-
-            </span>
-
-            <h2>
-
-              Book Appointment
-
-            </h2>
-
-            <p class="mb-4">
-
-              Schedule your dental consultation with our experienced team.
-
-            </p>
-
-            <app-appointment></app-appointment>
-
-          </div>
-
-        </div>
-
-        <!-- RIGHT CONTACT -->
-      <!-- RIGHT CONTACT -->
-<div class="col-lg-3">
-
-  <div class="contact-panel">
-
-    <h3>{{ home.contact.title }}</h3>
-
-    <div
-      class="contact-box"
-      *ngFor="let item of home.contact.items">
-
-      <mat-icon>{{ item.icon }}</mat-icon>
-
-      <div>
-
-        <h6>{{ item.title }}</h6>
-
-        <p [innerHTML]="item.value"></p>
 
       </div>
 
-    </div>
+      <!-- Appointment -->
+      <div class="appointment-card">
 
-    <!-- <button
-      mat-flat-button
-      color="primary"
-      class="w-100 mt-3">
+        <span class="section-tag">
 
-      {{ home.contact.buttonText }}
+          {{ home.appointment.subtitle }}
 
-    </button> -->
+        </span>
 
-  </div>
+        <h2>
 
-</div>
+          {{ home.appointment.title }}
+
+        </h2>
+
+        <div class="heading-divider">
+
+          <span></span>
+
+          <mat-icon>spa</mat-icon>
+
+          <span></span>
+
+        </div>
+
+        <p>
+
+          {{ home.appointment.description }}
+
+        </p>
+
+        <app-appointment></app-appointment>
+
+      </div>
+
+      <!-- Contact -->
+      <div class="contact-card">
+
+        <span class="section-tag">
+
+          {{ home.contact.badge }}
+
+        </span>
+
+        <h3>
+
+          {{ home.contact.title }}
+
+        </h3>
+
+        <div
+          class="contact-item"
+          *ngFor="let item of home.contact.items">
+
+          <div class="contact-icon">
+
+            <mat-icon>
+
+              {{ item.icon }}
+
+            </mat-icon>
+
+          </div>
+
+          <div class="contact-content">
+
+            <h5>
+
+              {{ item.title }}
+
+            </h5>
+
+            <p [innerHTML]="item.value"></p>
+
+          </div>
+
+        </div>
 
       </div>
 
