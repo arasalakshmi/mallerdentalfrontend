@@ -7,7 +7,7 @@ export const HEADER_DATA = {
     { title: 'Home', route: '/home' },
     { title: 'About Us', route: '/about' },
     { title: 'Services', route: '/services' },
-    { title: 'Testimonials', route: '/testimonials' },
+    { title: 'Testimonials', route: '/reviews' },
     { title: 'Gallery', route: '/gallery' },
     { title: 'Contact Us', route: '/contact' }
   ]

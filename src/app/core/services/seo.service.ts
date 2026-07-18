@@ -95,5 +95,19 @@ export class SeoService {
 
     link.setAttribute('href', url);
   }
+  
+ addSchema(schema: object): void {
 
+  const existing = document.getElementById('json-ld-schema');
+  if (existing) {
+    existing.remove();
+  }
+
+  const script = document.createElement('script');
+  script.id = 'json-ld-schema';
+  script.type = 'application/ld+json';
+  script.text = JSON.stringify(schema);
+
+  document.head.appendChild(script);
+}
 }

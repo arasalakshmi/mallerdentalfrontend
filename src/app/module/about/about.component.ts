@@ -26,5 +26,72 @@ keywords: 'About Maller Dental Clinic, dentist in RS Puram, dental clinic Coimba
   url: 'https://mallerdentalfrontend.vercel.app/about'
 });
  this.about = ABOUT_DATA;
+
+ this.seo.addSchema({
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "@id": "https://mallerdentalclinic.com/#dentist",
+  "name": "Maller Dental Clinic",
+  "url": "https://mallerdentalfrontend.vercel.app/about",
+  "logo": "https://mallerdentalclinic.com/assets/images/logo.png",
+  "image": "https://mallerdentalclinic.com/assets/images/about/about-hero.jpg",
+  "telephone": "+91-9442951313",
+  "priceRange": "₹₹",
+
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "First Floor, Gowtham Arcade, 48, Thiruvenkatasamy Rd W, Opposite Corporation Kalaiarangam, East, R.S. Puram",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "641002",
+    "addressCountry": "IN"
+  },
+
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Dr. Sudhakar V. Maller",
+      "jobTitle": "Founder & Prosthodontist"
+    },
+    {
+      "@type": "Person",
+      "name": "Dr. Udita V. Maller",
+      "jobTitle": "Co-Founder & Prosthodontist"
+    }
+  ],
+
+  "doctor": [
+    {
+      "@type": "Person",
+      "name": "Dr. Thirumalai Velu",
+      "jobTitle": "Cheif Dental Surgeon",
+      "alumniOf": "Ramakrishna Dental College",
+      "worksFor": {
+        "@type": "Dentist",
+        "name": "Maller Dental Clinic | RS Puram"
+      }
+    }
+  ],
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "20:00"
+    }
+  ],
+
+  "sameAs": [
+    "https://share.google/Tpf2kkI0NWnmIp3xw"
+  ]
+});
     }
 }

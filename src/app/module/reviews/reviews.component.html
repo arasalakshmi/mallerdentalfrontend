@@ -1,40 +1,223 @@
-<section class="reviews-hero">
-  <h1>Patient Reviews</h1>
-  <p>Real Experiences from Our Patients</p>
-</section>
+<!-- ==========================================
+ HERO SECTION
+========================================== -->
 
-<section class="rating-summary">
-  <h2>★★★★★ 4.9 / 5</h2>
-  <span>Based on Google Reviews</span>
-</section>
+<section class="contact-hero">
 
-<section class="slider-wrapper">
+  <img
+    class="hero-image"
+    [src]="review.backgroundImage"
+    [alt]="review.title">
 
-  <!-- LEFT BUTTON -->
-  <button class="nav left" (click)="slideLeft()">❮</button>
+  <div class="hero-overlay"></div>
 
-  <!-- SLIDER -->
-  <div class="reviews-slider" #slider>
-    <div class="review-card" *ngFor="let r of reviews">
-      <div class="stars">
-        <i class="fa fa-star" *ngFor="let s of stars(r.rating)"></i>
-      </div>
+  <div class="hero-content">
 
-      <p class="comment">“{{ r.comment }}”</p>
+    <h1>{{ review.title }}</h1>
 
-      <h4>{{ r.name }}</h4>
-      <span class="time">{{ r.time }}</span>
+    <div class="divider">
+      <span></span>
+      <mat-icon>spa</mat-icon>
+      <span></span>
     </div>
+
+    <h3>{{ review.subtitle }}</h3>
+
+    <p>{{ review.description }}</p>
+
   </div>
-
-  <!-- RIGHT BUTTON -->
-  <button class="nav right" (click)="slideRight()">❯</button>
-
+<div class="hero-curve">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path
+      fill="var(--main-bg)"
+      d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+    </path>
+  </svg>
+</div>
 </section>
 
-<section class="google-cta">
-  <h3>Read More on Google Reviews</h3>
-  <button>
-    <i class="fa fa-google"></i> View Google Reviews
-  </button>
+<!-- ==========================================
+     GOOGLE REVIEWS
+========================================== -->
+
+<section class="reviews-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                Google Reviews
+            </span>
+
+            <h2>
+                Trusted by Our Patients
+            </h2>
+
+            <p>
+                Read what our patients have to say about their experience at Maller Dental Clinic.
+            </p>
+
+        </div>
+
+        <!-- Rating Card -->
+
+        <div class="rating-card">
+
+            <div class="rating-left">
+
+                <img
+                    src="assets/icons/google-logo.svg"
+                    alt="Google">
+
+                <div>
+
+                    <h3>Google Rating</h3>
+
+                    <p>Based on {{googleInfo.totalReviews}} Reviews</p>
+
+                </div>
+
+            </div>
+
+            <div class="rating-right">
+
+                <span class="rating-number">
+
+                    {{googleInfo.rating}}
+
+                </span>
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Reviews -->
+
+        <div class="reviews-grid">
+
+            @for(review of reviews; track review.name){
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <img
+                            [src]="review.profilePhoto"
+                            [alt]="review.name">
+
+                        <div>
+
+                            <h4>{{review.name}}</h4>
+
+                            <small>{{review.time}}</small>
+
+                        </div>
+
+                    </div>
+
+                    <div class="review-stars">
+
+                        ★★★★★
+
+                    </div>
+
+                    <p class="review-text">
+
+                        "{{review.review}}"
+
+                    </p>
+
+                </div>
+
+            }
+
+        </div>
+
+        <div class="review-btn">
+
+            <a
+                [href]="googleInfo.buttonLink"
+                target="_blank"
+                class="primary-btn">
+
+                {{googleInfo.buttonText}}
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+     FAQ SECTION
+========================================== -->
+
+<section class="faq-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                FAQs
+            </span>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+            <p>
+                Find answers to some of the most common questions about appointments, treatments, and visiting Maller Dental Clinic.
+            </p>
+
+        </div>
+
+        <div class="faq-container">
+
+            @for(faq of faqs; track $index){
+
+                <div class="faq-item">
+
+                    <button
+                        class="faq-question"
+                        (click)="toggleFaq($index)">
+
+                        <span>{{faq.question}}</span>
+
+                        <i
+                            class="fa-solid"
+                            [class.fa-plus]="openedIndex !== $index"
+                            [class.fa-minus]="openedIndex === $index">
+                        </i>
+
+                    </button>
+
+                    @if(openedIndex === $index){
+
+                        <div class="faq-answer">
+
+                            <p>
+                                {{faq.answer}}
+                            </p>
+
+                        </div>
+
+                    }
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
 </section>

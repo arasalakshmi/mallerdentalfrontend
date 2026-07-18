@@ -31,7 +31,7 @@ ngOnInit() {
  // this.loadServices();
   this.seo.update({
   title: 'Best Dental Clinic in RS Puram, Coimbatore | Maller Dental Clinic',
-description: 'Looking for the best dental clinic in RS Puram, Coimbatore? Maller Dental Clinic provides dental implants, root canal treatment, cosmetic dentistry, pediatric dentistry and family dental care with experienced dentists.',
+description: 'Looking for the best dental clinic in RS Puram, Coimbatore? Maller Dental Clinic provides dental implants, root canal treatment, cosmetic dentistry, pediatric dentistry and family dental care with experienced dentists. R.S Puram, Coimbatore, Vadavalli Dental Clinic near Me',
 keywords: 'best dental clinic in rs puram,best dentist in rs puram,dentist in rs puram,dental clinic coimbatore,best dental clinic coimbatore,root canal treatment rs puram,dental implants coimbatore,cosmetic dentist coimbatore,family dentist rs puram, Maller Dental Clinic, Dental clinic in saibabacolony, dental clinic in Vadavalli, dental clinic in gandhipuram, dental clinic in RSPURAM, Dental clinic in R.S Puram, dental clinic in R.S. Puram',
     url: 'https://mallerdentalfrontend.vercel.app',
     image: 'https://www.mallerdentalfrontend.vercel.app/assets/images/logo.png'

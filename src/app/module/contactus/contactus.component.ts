@@ -32,6 +32,28 @@ export class ContactusComponent {
       url: 'https://mallerdentalfrontend.vercel.app/contact',
       image: 'https://mallerdentalfrontend.vercel.app/images/contact-banner.jpg'
     });
+    this.seo.addSchema({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long has Maller Dental Clinic been serving patients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Maller Dental Clinic has been providing quality meets excellence since 1998 in RS Puram, Coimbatore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Maller Dental Clinic located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First Floor, Gowtham Arcade, 48, Thiruvenkatasamy Rd W, Opposite Corporation Kalaiarangam, East, R.S. Puram, Coimbatore, Tamil Nadu 641002."
+      }
+    }
+  ]
+});
   }
 
  
