@@ -46,10 +46,10 @@ export interface Review {
 }
 
 export const GOOGLE_REVIEW_INFO = {
-  rating: 4.9,
-  totalReviews: '200+',
-  buttonText: 'View All Reviews',
-  buttonLink: ''
+  rating: 0,
+  totalReviews: '',
+  buttonText: 'Read More Reviews',
+  buttonLink: 'https://share.google/MpedVJeZMHT6GfVKc'
 };
 
 export const DUMMY_REVIEWS: Review[] = [
