@@ -37,119 +37,50 @@
 </section>
 
 <!-- ==========================================
-     GOOGLE REVIEWS
-========================================== -->
+   <!-- =======================================================
+                GOOGLE REVIEWS SECTION
+======================================================= -->
 
-<section class="reviews-section">
+<app-review-list></app-review-list>
+
+
+
+
+
+<!-- =======================================================
+                CALL TO ACTION
+======================================================= -->
+
+<section class="review-cta">
 
     <div class="container">
 
-        <div class="section-header">
+        <div class="cta-card">
 
-            <span class="section-badge">
-                Google Reviews
+            <span>
+
+                Your Smile Deserves Exceptional Care
+
             </span>
 
             <h2>
-                Trusted by Our Patients
+
+                Become Our Next Happy Patient
+
             </h2>
 
             <p>
-                Read what our patients have to say about their experience at Maller Dental Clinic.
+
+                Experience gentle, personalized dental care from our experienced
+                team and discover why so many families trust Maller Dental Clinic.
+
             </p>
 
-        </div>
-
-        <!-- Rating Card -->
-
-        <div class="rating-card">
-
-            <div class="rating-left">
-
-                <img
-                    src="assets/images/reviewImg/google.png"
-                    alt="Google"
-                     width="48"
-  height="48">
-
-                <div>
-
-                   <h2>{{ googleInfo.rating }}</h2>
-
-<p>Based on {{ googleInfo.totalReviews }} Reviews</p>
-
-                </div>
-
-            </div>
-
-            <div class="rating-right">
-
-                <span class="rating-number">
-
-                    {{googleInfo.rating}}
-
-                </span>
-
-                <div class="stars">
-
-                    ★★★★★
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Reviews -->
-
-        <div class="reviews-grid">
-
-            @for(review of reviews; track review.name){
-
-                <div class="review-card">
-
-                    <div class="review-header">
-
-                        <img
-                            [src]="review.profilePhoto"
-                            [alt]="review.name">
-
-                        <div>
-
-                            <h4>{{review.name}}</h4>
-
-                            <small>{{review.time}}</small>
-
-                        </div>
-
-                    </div>
-
-                    <div class="review-stars">
-
-                        ★★★★★
-
-                    </div>
-
-                    <p class="review-text">
-
-                        "{{review.review}}"
-
-                    </p>
-
-                </div>
-
-            }
-
-        </div>
-
-        <div class="review-btn">
-
             <a
-                [href]="googleInfo.buttonLink"
-                target="_blank"
+                routerLink="/appointment"
                 class="primary-btn">
 
-                {{googleInfo.buttonText}}
+                Book an Appointment
 
             </a>
 
@@ -158,9 +89,15 @@
     </div>
 
 </section>
-<!-- ==========================================
-     FAQ SECTION
-========================================== -->
+
+
+
+
+
+
+<!-- =======================================================
+                    FAQ SECTION
+======================================================= -->
 
 <section class="faq-section">
 
@@ -169,52 +106,69 @@
         <div class="section-header">
 
             <span class="section-badge">
+
                 FAQs
+
             </span>
 
             <h2>
+
                 Frequently Asked Questions
+
             </h2>
 
             <p>
-                Find answers to some of the most common questions about appointments, treatments, and visiting Maller Dental Clinic.
+
+                Everything you need to know before visiting
+                Maller Dental Clinic.
+
             </p>
 
         </div>
 
-        <div class="faq-container">
+
+
+        <div class="faq-wrapper">
 
             @for(faq of faqs; track $index){
 
-                <div class="faq-item">
+            <div
+                class="faq-card"
+                [class.active]="openedIndex === $index">
 
-                    <button
-                        class="faq-question"
-                        (click)="toggleFaq($index)">
+                <button
+                    class="faq-question"
+                    (click)="toggleFaq($index)">
 
-                        <span>{{faq.question}}</span>
+                    <span>
 
-                        <i
-                            class="fa-solid"
-                            [class.fa-plus]="openedIndex !== $index"
-                            [class.fa-minus]="openedIndex === $index">
-                        </i>
+                        {{faq.question}}
 
-                    </button>
+                    </span>
 
-                    @if(openedIndex === $index){
+                    <i
+                        class="fa-solid"
+                        [class.fa-plus]="openedIndex !== $index"
+                        [class.fa-minus]="openedIndex === $index">
+                    </i>
 
-                        <div class="faq-answer">
+                </button>
 
-                            <p>
-                                {{faq.answer}}
-                            </p>
+                @if(openedIndex === $index){
 
-                        </div>
+                <div class="faq-answer">
 
-                    }
+                    <p>
+
+                        {{faq.answer}}
+
+                    </p>
 
                 </div>
+
+                }
+
+            </div>
 
             }
 

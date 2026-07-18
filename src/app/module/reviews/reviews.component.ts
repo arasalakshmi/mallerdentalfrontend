@@ -105,26 +105,27 @@ keywords: 'Maller Dental Clinic reviews, Best dental clinic reviews Coimbatore, 
 
 
   loadReviews(): void {
-  this.reviewService.getReviews().subscribe({
-    next: (data) => {
-      console.log(data,"data")
-  this.googleInfo = {
-  ...this.googleInfo,
-  rating: data.rating,
-  totalReviews: `${data.totalReviews}+`
-};
 
-this.reviews = [...data.reviews];
-      console.log(this.reviews)
-    },
-    error: (error) => {
-      console.error('Failed to load Google reviews:', error);
-      
-    }
-    
-  });
+    this.reviewService.getReviews().subscribe({
 
-  
-}
+      next: (data) => {
+
+        this.googleInfo.rating = data.rating;
+
+        this.googleInfo.totalReviews = `${data.totalReviews}+`;
+
+        this.reviews = data.reviews.slice(0, 6);
+
+      },
+
+      error: (error) => {
+
+        console.error('Unable to load Google reviews.', error);
+
+      }
+
+    });
+
+  }
 }
 

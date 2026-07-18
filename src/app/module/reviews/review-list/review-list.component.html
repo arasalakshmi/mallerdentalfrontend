@@ -1,0 +1,203 @@
+<section class="reviews-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                Google Reviews
+            </span>
+
+            <h2>
+                Trusted by Hundreds of Happy Smiles
+            </h2>
+
+            <p>
+                Every smile has a story. Read genuine Google reviews from patients
+                who trusted Maller Dental Clinic for comfortable, modern and
+                compassionate dental care.
+            </p>
+
+        </div>
+
+
+        <!-- Google Summary Card -->
+
+        <div class="google-summary">
+
+            <div class="summary-left">
+
+                <div class="google-icon">
+
+                    <img
+                        src="assets/images/reviewImg/google.png"
+                        alt="Google">
+
+                </div>
+
+                <div>
+
+                    <span class="google-label">
+
+                        Google Rating
+
+                    </span>
+
+                    <h3>
+
+                        {{googleInfo.rating}}
+
+                        <span>★★★★★</span>
+
+                    </h3>
+
+                    <p>
+
+                        Based on
+
+                        <strong>{{googleInfo.totalReviews}}</strong>
+
+                        Verified Google Reviews
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                class="google-btn"
+                [href]="googleInfo.buttonLink"
+                target="_blank">
+
+                View All Reviews
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- =======================================================
+                    LATEST REVIEWS
+======================================================= -->
+
+<section class="patient-review-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+
+                Latest Reviews
+
+            </span>
+
+            <h2>
+
+                What Our Patients Say
+
+            </h2>
+
+            <p>
+
+                Genuine experiences shared by patients after visiting
+                Maller Dental Clinic.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="reviews-grid">
+
+            @for(review of reviews; track review.name){
+
+            <article class="review-card">
+                <div class="verified-badge">
+    <i class="fa-solid fa-circle-check"></i>
+    Verified Google Review
+</div>
+
+                <div class="review-top">
+
+                    <div class="review-user">
+
+                        <img
+                            [src]="review.profilePhoto"
+                            [alt]="review.name">
+
+                        <div>
+
+                            <h4>
+
+                                {{review.name}}
+
+                            </h4>
+
+                            <span>
+
+                                {{review.time}}
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <img
+                        class="google-small"
+                        src="assets/images/reviewImg/google.png"
+                        alt="Google">
+
+                </div>
+
+
+
+                
+
+
+
+                <p class="review-content">
+
+                    "{{review.review}}"
+
+                </p>
+
+            </article>
+
+            }
+
+        </div>
+
+
+
+        <div class="review-footer">
+
+            <a
+                [href]="googleInfo.buttonLink"
+                target="_blank"
+                class="primary-btn">
+
+                Read All Google Reviews
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

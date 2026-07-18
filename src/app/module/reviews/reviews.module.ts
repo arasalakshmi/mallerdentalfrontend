@@ -6,16 +6,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../../material.module';
 import { ReviewsComponent } from './reviews.component';
 import { ReviewRoutingModule } from './reviews-routing.module';
+import { ReviewListComponent } from './review-list/review-list.component';
 
 @NgModule({
   declarations: [
-    ReviewsComponent
+    ReviewsComponent,
+    ReviewListComponent
   ],
   imports: [
     CommonModule,
     ReviewRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-  ]
+  ],
+  exports:[ReviewListComponent]
 })
 export class ReviewModule {}
