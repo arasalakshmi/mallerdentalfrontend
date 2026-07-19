@@ -39,6 +39,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./module/appointment/appointment.module').then(m => m.AppointmentModule)
   },
+    {
+    path: 'blog',
+    loadChildren: () =>
+      import('./module/blog/blog.module').then(m => m.BlogModule)
+  },
 
   // Optional: 404
   { path: '**', redirectTo: 'home' }

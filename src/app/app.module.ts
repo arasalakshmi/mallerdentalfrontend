@@ -20,6 +20,7 @@ import { SiteContentService } from './services/sitecontent.service';
 import { HeaderFooterService } from './core/headerFooterService';
 //import { AppointmentRoutingModule } from './module/appointment/appointment.routing-module';
 import { MaterialModule } from './material.module';
+import { BlogModule } from './module/blog/blog.module';
 @NgModule({ declarations: [
         AppComponent,
         HeaderComponent,
@@ -32,6 +33,8 @@ import { MaterialModule } from './material.module';
         AbotRoutingModule,
         ReviewRoutingModule,
         treatmentModule,
+        BlogModule,
+        
         // AngularFireModule.initializeApp(enviroment.firebase),
        // AngularFirestoreModule,
         //AngularFireStorageModule,

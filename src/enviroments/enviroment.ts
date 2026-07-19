@@ -1,8 +1,11 @@
 export const enviroment = {
-  // production: true,
+   production: true,
   // apiUrl:'https://mallerdentalbackend.onrender.com'
-  production:false,
-  apiUrl:'http://localhost:5000'
   
-
+   sanity: {
+    projectId: 'povj15el',
+    dataset: 'production',
+    apiVersion: '2026-07-19',
+    useCdn: true
+  }
 };

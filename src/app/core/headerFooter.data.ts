@@ -9,6 +9,7 @@ export const HEADER_DATA = {
     { title: 'Services', route: '/treatments' },
     { title: 'Testimonials', route: '/reviews' },
    // { title: 'Gallery', route: '/gallery' },
-    { title: 'Contact Us', route: '/contact' }
+    { title: 'Contact Us', route: '/contact' },
+    { title: 'Blogs', route: '/blog' }
   ]
 };
