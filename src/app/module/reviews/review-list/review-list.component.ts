@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 import { GoogleReview, ReviewService } from '../review.service';
 import { DUMMY_REVIEWS, GOOGLE_REVIEW_INFO, REVIEWS_HERO } from '../review.data';
 
@@ -8,7 +8,7 @@ import { DUMMY_REVIEWS, GOOGLE_REVIEW_INFO, REVIEWS_HERO } from '../review.data'
   templateUrl: './review-list.component.html',
   styleUrl: './review-list.component.scss',
 })
-export class ReviewListComponent {
+export class ReviewListComponent implements OnInit{
  review = REVIEWS_HERO;
   googleInfo = GOOGLE_REVIEW_INFO;
 

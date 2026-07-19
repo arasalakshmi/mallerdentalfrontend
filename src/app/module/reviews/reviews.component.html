@@ -40,7 +40,92 @@
    <!-- =======================================================
                 GOOGLE REVIEWS SECTION
 ======================================================= -->
+<section class="reviews-section">
 
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                Google Reviews
+            </span>
+
+            <h2>
+                Trusted by Hundreds of Happy Smiles
+            </h2>
+
+            <p>
+                Every smile has a story. Read genuine Google reviews from patients
+                who trusted Maller Dental Clinic for comfortable, modern and
+                compassionate dental care.
+            </p>
+
+        </div>
+
+
+        <!-- Google Summary Card -->
+
+        <div class="google-summary">
+
+            <div class="summary-left">
+
+                <div class="google-icon">
+
+                    <img
+                        src="assets/images/reviewImg/google.png"
+                        alt="Google">
+
+                </div>
+
+                <div>
+
+                    <span class="google-label">
+
+                        Google Rating
+
+                    </span>
+
+                    <h3>
+
+                        {{googleInfo.rating}}
+
+                        <span>★★★★★</span>
+
+                    </h3>
+
+                    <p>
+
+                        Based on
+
+                        <strong>{{googleInfo.totalReviews}}</strong>
+
+                        Verified Google Reviews
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                class="google-btn"
+                [href]="googleInfo.buttonLink"
+                target="_blank">
+
+                View All Reviews
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 <app-review-list></app-review-list>
 
 
