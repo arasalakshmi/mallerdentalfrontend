@@ -31,7 +31,7 @@ export const HOME_DATA = {
 
     position: 'Dental Surgeon',
 
-    image: 'assets/images/homeImg/docImg.png',
+    image: 'assets/images/homeImg/doctorImg.png',
 
     profileRoute: '/doctor',
 

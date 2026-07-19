@@ -31,7 +31,7 @@
         <button
           mat-raised-button
           color="primary"
-          routerLink="/appointment">
+          routerLink="/appointment/form">
 
           <mat-icon>calendar_month</mat-icon>
           Book Appointment
@@ -128,66 +128,56 @@
       </div>
 
       <!-- RIGHT SIDE -->
+<div class="col-lg-6">
 
-      <div class="col-lg-6">
+  <div class="doctor-card">
 
-        <div class="doctor-card">
+    <div class="doctor-top">
 
-          <div class="doctor-content">
+      <div class="doctor-content">
 
-            <span class="section-tag">
-              Expert Care You Can Trust
-            </span>
+        <span class="section-tag">
+          Expert Care You Can Trust
+        </span>
 
-            <h2>
-              About Our Doctor
-            </h2>
+        <h2>About Our Doctor</h2>
 
-            <h4>
+        <h4>{{ home.doctor.name }}</h4>
 
-              {{ home.doctor.name }}
-
-            </h4>
-
-            <p>
-
-              {{home.doctor.qualification}}
-
-              |
-
-              {{home?.doctor.position}}
-
-            </p>
-
-            <ul>
-
-            <li *ngFor="let item of home.doctor.highlights">
-  {{ item }}
-</li>
-
-            </ul>
-
-            <button
-              mat-raised-button
-              color="primary">
-
-              View Profile
-
-            </button>
-
-          </div>
-
-          <div class="doctor-image">
-
-            <img
-              [src]="home.doctor.image"
-              alt="Doctor">
-
-          </div>
-
-        </div>
+        <p>
+          {{ home.doctor.qualification }}
+          |
+          {{ home.doctor.position }}
+        </p>
 
       </div>
+
+      <div class="doctor-image">
+        <img
+          [src]="home.doctor.image"
+          alt="Doctor">
+      </div>
+
+    </div>
+
+    <ul>
+      <li *ngFor="let item of home.doctor.highlights">
+        {{ item }}
+      </li>
+    </ul>
+
+    <button
+      mat-raised-button
+      color="primary"
+      routerLink="/about">
+
+      View Profile
+
+    </button>
+
+  </div>
+
+</div>
 
     </div>
 
@@ -233,7 +223,7 @@
 </section>
 <section class="testimonial-section py-5">
   <div class="container">
-    
+
      <app-review-list> </app-review-list>
     
   </div>

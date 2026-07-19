@@ -6,9 +6,9 @@ export const HEADER_DATA = {
    navMenu: [
     { title: 'Home', route: '/home' },
     { title: 'About Us', route: '/about' },
-    { title: 'Services', route: '/services' },
+    { title: 'Services', route: '/treatments' },
     { title: 'Testimonials', route: '/reviews' },
-    { title: 'Gallery', route: '/gallery' },
+   // { title: 'Gallery', route: '/gallery' },
     { title: 'Contact Us', route: '/contact' }
   ]
 };

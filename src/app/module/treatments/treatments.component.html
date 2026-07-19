@@ -1,27 +1,238 @@
-<section class="services-wrapper">
-  <h2 class="section-title">Our Dental Services</h2>
-  <p class="section-subtitle">
-    Advanced dentistry tailored for comfort, function, and aesthetics.
-  </p>
+<section class="contact-hero">
 
-  <div class="services-grid">
-    <div
-      class="service-card"
-      *ngFor="let service of services"
-      (click)="goToDetail(service.slug)"
-    >
-      <div class="image-wrap">
-        <img [src]="imageUrl + service.image" alt="{{ service.title }}" />
-      </div>
+  <img
+    class="hero-image"
+    [src]="page.hero.image"
+    [alt]="page.hero.title">
 
-      <div class="card-content">
-        <h3>{{ service.name }}</h3>
-        <p>{{ service.longDesc }}</p>
+  <div class="hero-overlay"></div>
 
-        <span class="view-link">
-          View Details →
-        </span>
-      </div>
+  <div class="hero-content">
+
+    <h1>{{ page.hero.title }}</h1>
+
+    <div class="divider">
+      <span></span>
+      <mat-icon>spa</mat-icon>
+      <span></span>
     </div>
+
+    <h3>{{ page.hero.subtitle }}</h3>
+
+    <p>{{ page.hero.description }}</p>
+
   </div>
+<div class="hero-curve">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path
+      fill="var(--main-bg)"
+      d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
+    </path>
+  </svg>
+</div>
+</section>
+<!-- ===============================
+     Services Section
+================================ -->
+
+<section class="services-section">
+
+  <div class="container">
+
+    <!-- Section Header -->
+
+    <div class="section-header text-center">
+
+      <span class="section-tag">
+        {{ page.servicesSection.badge }}
+      </span>
+
+      <h2 class="section-title">
+        {{ page.servicesSection.title }}
+      </h2>
+
+      <p class="section-subtitle">
+        {{ page.servicesSection.subtitle }}
+      </p>
+
+    </div>
+
+    <!-- Services Grid -->
+
+    <div class="row g-4">
+
+      <div
+        class="col-xl-3 col-lg-4 col-md-6"
+        *ngFor="let service of services">
+
+        <div class="service-card">
+
+          <!-- Image -->
+
+          <div class="service-image">
+
+            <img
+              [src]="service.image"
+              [alt]="service.title">
+
+          </div>
+
+          <!-- Content -->
+
+          <div class="service-content">
+
+            <!-- Floating Icon -->
+
+            <!-- <div class="service-icon">
+
+              <img
+                [src]="service.image"
+                [alt]="service.title">
+
+            </div> -->
+
+            <h4>
+              {{ service.title }}
+            </h4>
+
+            <p>
+              {{ service.shortDescription }}
+            </p>
+
+            <a
+              [routerLink]="['/treatments', service.slug]"
+              class="service-link">
+
+              View Details
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ============================
+     WHY CHOOSE US
+=============================-->
+
+<!--=================================
+      WHY CHOOSE US
+==================================-->
+
+<section class="why-choose-section">
+
+    <div class="container">
+
+        <div class="features-wrapper">
+
+            <div
+                class="feature-item"
+                *ngFor="let feature of page.features">
+
+                <div class="feature-icon">
+
+                    <mat-icon>
+                        {{ feature.icon }}
+                    </mat-icon>
+
+                </div>
+
+                <div class="feature-content">
+
+                    <h5>{{ feature.title }}</h5>
+
+                    <p>{{ feature.description }}</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=================================
+        APPOINTMENT CTA
+==================================-->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-banner">
+
+            <!-- Doctor -->
+
+            <div class="cta-doctor">
+
+                <img
+                    [src]="page.cta.doctorImage"
+                    alt="Doctor">
+
+            </div>
+
+            <!-- Content -->
+
+            <div class="cta-content">
+
+                <h2>{{page.cta.title}}</h2>
+
+                <p>{{page.cta.description}}</p>
+
+            </div>
+
+            <!-- Phone -->
+
+            <div class="cta-phone">
+
+                <mat-icon>call</mat-icon>
+
+                <div>
+
+                    <span>Call Us</span>
+
+                    <h5>{{page.cta.phone}}</h5>
+
+                </div>
+
+            </div>
+
+            <!-- Button -->
+
+            <div class="cta-button">
+
+                <a
+                    routerLink="/appointment/form"
+                    class="btn-book">
+
+                    <mat-icon>calendar_month</mat-icon>
+
+                    {{page.cta.buttonText}}
+
+                </a>
+
+            </div>
+
+            <!-- Decoration -->
+
+            <div class="cta-decoration">
+
+                <mat-icon>spa</mat-icon>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>

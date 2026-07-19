@@ -7,10 +7,12 @@ import { MaterialModule } from '../../material.module';
 
 import { AppointmentComponent } from './appointment.component';
 import { AppointmentRoutingModule } from './appointment.routing-module';
+import { AppointListComponent } from './appoint-list/appoint-list.component';
 
 @NgModule({
   declarations: [
-    AppointmentComponent
+    AppointmentComponent,
+    AppointListComponent
   ],
   imports: [
     CommonModule,
