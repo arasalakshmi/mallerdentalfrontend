@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      `https://places.googleapis.com/v1/places/${placeId}?fields=displayName,rating,userRatingCount,reviews&reviewSort=NEWEST&key=${apiKey}`
+      `https://places.googleapis.com/v1/places/${placeId}?fields=displayName,rating,userRatingCount,reviews&key=${apiKey}`
     );
 
     if (!response.ok) {
@@ -20,6 +20,7 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
+    console.log(data)
 
     res.status(200).json({
       rating: data.rating,
