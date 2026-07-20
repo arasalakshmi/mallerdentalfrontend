@@ -1,0 +1,33 @@
+<div class="portable-text">
+
+  <ng-container *ngFor="let block of renderedBlocks">
+
+    <!-- Bullet List -->
+
+    <ul *ngIf="block.type === 'bullet'">
+
+     <li *ngFor="let item of block.items"
+    [innerHTML]="renderChildren(item.children)">
+</li>
+
+    </ul>
+
+    <!-- H2 -->
+
+ <h2 *ngIf="block.style === 'h2'"
+    [innerHTML]="renderChildren(block.children)">
+</h2>
+
+<h3 *ngIf="block.style === 'h3'"
+    [innerHTML]="renderChildren(block.children)">
+</h3>
+
+    <!-- Paragraph -->
+
+  <p *ngIf="block.style === 'normal' && !block.listItem"
+   [innerHTML]="renderChildren(block.children)">
+</p>
+
+  </ng-container>
+
+</div>

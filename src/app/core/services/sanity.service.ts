@@ -56,4 +56,26 @@ export class SanityService {
       }
     `, { slug });
   }
+
+  getRelatedBlogs(currentSlug: string) {
+
+  return this.client.fetch(
+
+    `*[_type=="post" && slug.current != $slug]
+      | order(publishedAt desc)[0...3]{
+
+      _id,
+      title,
+      slug,
+      excerpt,
+      publishedAt,
+      mainImage
+
+    }`,
+
+    { slug: currentSlug }
+
+  );
+
+}
 }

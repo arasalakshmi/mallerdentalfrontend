@@ -14,7 +14,36 @@ export const HOME_DATA = {
 
     experience: '28+',
 
-    experienceText: 'Years of Trusted Dental Care'
+    experienceText: 'Years of Trusted Dental Care',
+      primaryButton: {
+    text: 'Book Appointment',
+    link: '/appointment'
+  },
+
+      secondaryButton: {
+    text: 'Our Treatments',
+    link: '/treatments'
+  },
+
+  breadcrumbs: [
+    { label: 'Home', link: '/' },
+    { label: 'About' }
+  ],
+
+  badges: [
+    {
+      icon: 'bi bi-award',
+      title: '25+ Years'
+    },
+    {
+      icon: 'bi bi-heart-pulse',
+      title: 'Patient First'
+    },
+    {
+      icon: 'bi bi-shield-check',
+      title: 'Trusted Care'
+    }
+  ]
   },
 
   /* ================= DOCTOR ================= */

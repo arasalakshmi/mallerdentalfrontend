@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../../material.module';
 import { AppointmentModule } from '../appointment/appointment.module';
 import {ReviewModule} from '../reviews/reviews.module';
+import { PageModule } from '../../core/page-hero/page.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {ReviewModule} from '../reviews/reviews.module';
     MaterialModule,
     AppointmentModule,
     ReviewModule,
+    PageModule
   ]
 })
 export class HomeModule {}

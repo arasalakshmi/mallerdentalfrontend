@@ -1,0 +1,209 @@
+.page-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:90px 0;
+
+    background:linear-gradient(
+        135deg,
+        var(--main-bg),
+        var(--section)
+    );
+
+}
+
+.page-hero::before{
+
+    content:'';
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-120px;
+
+    width:320px;
+
+    height:320px;
+
+    background:rgba(90,111,60,.08);
+
+    border-radius:50%;
+
+}
+
+.page-hero::after{
+
+    content:'';
+
+    position:absolute;
+
+    bottom:-100px;
+
+    left:-100px;
+
+    width:260px;
+
+    height:260px;
+
+    background:rgba(194,87,45,.08);
+
+    border-radius:50%;
+
+}
+
+.breadcrumb-nav{
+
+    margin-bottom:40px;
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+.breadcrumb-nav a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+}
+
+.hero-subtitle{
+
+    display:inline-block;
+
+    background:rgba(90,111,60,.12);
+
+    color:var(--primary);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.page-hero h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.page-hero p{
+
+    font-size:1.1rem;
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+.hero-badges{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.badge-card{
+
+    background:#fff;
+
+    padding:14px 20px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.badge-card i{
+
+    color:var(--primary);
+
+    font-size:1.3rem;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:28px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+}
+
+@media(max-width:991px){
+
+.page-hero{
+
+padding:70px 0;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-badges{
+
+justify-content:center;
+
+}
+
+.page-hero h1{
+
+font-size:2.3rem;
+
+}
+
+}
