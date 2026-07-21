@@ -1,64 +1,12 @@
 <!-- ================= HERO SECTION ================= -->
-
-<section class="about-hero">
-
-  <img
-    class="hero-bg"
-    [src]="about.hero.image"
-    [alt]="about.hero.title">
-
-  <div class="hero-overlay"></div>
-
-  <div class="container">
-
-    <div class="hero-content">
-
-      <span class="section-tag">
-        {{ about.hero.tag }}
-      </span>
-
-      <h1>
-        {{ about.hero.title }}
-      </h1>
-
-      <h4>
-        {{ about.hero.subtitle }}
-      </h4>
-
-      <p>
-        {{ about.hero.description }}
-      </p>
-
-      <div class="hero-features">
-
-        <div
-          class="hero-feature"
-          *ngFor="let feature of about.hero.highlights">
-
-          <div class="feature-icon">
-            <mat-icon>{{ feature.icon }}</mat-icon>
-          </div>
-
-          <h6>{{ feature.title }}</h6>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="hero-curve">
-    <svg viewBox="0 0 1440 170" preserveAspectRatio="none">
-      <path
-        d="M0,120 C350,20 1090,20 1440,120 L1440,170 L0,170 Z"
-        fill="#FBF8F3">
-      </path>
-    </svg>
-  </div>
-
-</section>
+<app-page-hero
+  [image]="about.hero.image"
+  [title]="about.hero.title"
+  [subtitle]="about.hero.subtitle"
+  [description]="about.hero.description"
+  [tag]="about.hero.tag"
+  [features]="about.hero.highlights">
+</app-page-hero>
 
 <!-- ================= CURRENT DOCTOR ================= -->
 

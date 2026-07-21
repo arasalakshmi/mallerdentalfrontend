@@ -8,6 +8,7 @@ import { MaterialModule } from '../../material.module';
 import { ContactusComponent } from './contactus.component';
 import { ContactRoutingModule } from './contactus-routing.module';
 import { AppointmentModule } from '../appointment/appointment.module';
+import { PageModule } from '../../core/page-hero/page.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppointmentModule } from '../appointment/appointment.module';
     ContactRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-    AppointmentModule
+    AppointmentModule,
+    PageModule,
   ]
 })
 export class ContactModule {}

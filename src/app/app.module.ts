@@ -10,17 +10,15 @@ import { HomeRoutingModule } from './module/home/home-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AbotRoutingModule } from './module/about/about-routing.module';
 import { ReviewRoutingModule } from './module/reviews/reviews-routing.module';
-import { treatmentModule } from './module/treatments/treatments.module';
-//import { AngularFireModule } from '@angular/fire/compat';
-// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-// import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { enviroment } from '../enviroments/enviroment';
 import { SiteContentService } from './services/sitecontent.service';
 import { HeaderFooterService } from './core/headerFooterService';
 //import { AppointmentRoutingModule } from './module/appointment/appointment.routing-module';
 import { MaterialModule } from './material.module';
-import { BlogModule } from './module/blog/blog.module';
+//import { BlogModule } from './module/blog/blog.module';
+import { treatmentRoutingModule } from './module/treatments/treatment-routing.module';
+import { BlogRoutingModule } from './module/blog/blog-routing.module';
 @NgModule({ declarations: [
         AppComponent,
         HeaderComponent,
@@ -32,8 +30,8 @@ import { BlogModule } from './module/blog/blog.module';
         HomeRoutingModule,
         AbotRoutingModule,
         ReviewRoutingModule,
-        treatmentModule,
-        BlogModule,
+        treatmentRoutingModule,
+        BlogRoutingModule,
         
         // AngularFireModule.initializeApp(enviroment.firebase),
        // AngularFirestoreModule,

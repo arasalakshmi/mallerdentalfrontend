@@ -1,127 +1,174 @@
-<section class="page-hero">
+<section
+  class="hero-section"
+  [ngClass]="{
+    'hero-home': showButtons,
+    'hero-about': features.length > 0,
+    'hero-standard': !showButtons && features.length === 0
+  }">
 
-  <div class="container">
+  <img
+    class="hero-bg"
+    [src]="image"
+    [alt]="title">
 
-    <!-- Breadcrumb -->
-    <nav
-      class="breadcrumb-nav"
-      *ngIf="hero.breadcrumbs?.length">
+  <div class="hero-overlay"></div>
 
-      <ng-container *ngFor="let item of hero.breadcrumbs; let last = last">
+  <!-- ================= HOME ================= -->
 
-        <a
-          *ngIf="item.link && !last"
-          [routerLink]="item.link">
+  <div
+    class="container hero-home-layout"
+    *ngIf="showButtons">
 
-          {{item.label}}
+    <div class="hero-left">
 
-        </a>
+      <span class="hero-tag" *ngIf="tag">
+        <span class="line"></span>
+        {{ tag }}
+      </span>
 
-        <span
-          *ngIf="!item.link || last">
+      <h1>{{ title }}</h1>
 
-          {{item.label}}
+      <p>{{ description }}</p>
 
-        </span>
+      <div class="hero-buttons">
 
-        <i
-          class="bi bi-chevron-right"
-          *ngIf="!last">
+        <button
+          mat-raised-button
+          color="primary"
+          routerLink="/appointment/form">
 
-        </i>
+          <mat-icon>calendar_month</mat-icon>
 
-      </ng-container>
+          Book Appointment
 
-    </nav>
+        </button>
 
+        <button
+          mat-stroked-button
+          class="explore-btn"
+          routerLink="/services">
 
-    <div class="row align-items-center gy-5">
+          Explore Treatments
 
-      <!-- Left -->
+          <mat-icon>arrow_forward</mat-icon>
 
-      <div class="col-lg-6">
-
-        <span
-          class="hero-subtitle"
-          *ngIf="hero.subtitle">
-
-          {{hero.subtitle}}
-
-        </span>
-
-        <h1>
-
-          {{hero.title}}
-
-        </h1>
-
-        <p
-          *ngIf="hero.description">
-
-          {{hero.description}}
-
-        </p>
-
-
-        <div
-          class="hero-buttons">
-
-          <a
-            *ngIf="hero.primaryButton"
-            [routerLink]="hero.primaryButton.link"
-            class="btn btn-primary">
-
-            {{hero.primaryButton.text}}
-
-          </a>
-
-          <a
-            *ngIf="hero.secondaryButton"
-            [routerLink]="hero.secondaryButton.link"
-            class="btn btn-outline-primary">
-
-            {{hero.secondaryButton.text}}
-
-          </a>
-
-        </div>
-
-
-        <div
-          class="hero-badges"
-          *ngIf="hero.badges?.length">
-
-          <div
-            class="badge-card"
-            *ngFor="let badge of hero.badges">
-
-            <i [class]="badge.icon"></i>
-
-            <span>
-
-              {{badge.title}}
-
-            </span>
-
-          </div>
-
-        </div>
+        </button>
 
       </div>
 
+      <div class="hero-experience">
 
-      <!-- Right -->
+        <mat-icon>verified</mat-icon>
 
-      <div class="col-lg-6 text-center">
+        <span>
 
-        <img
-          [src]="hero.image"
-          [alt]="hero.title"
-          class="hero-image">
+          <strong>28+</strong>
+
+          Years of Trusted Dental Care
+
+        </span>
 
       </div>
 
     </div>
+
+    <div class="hero-right"></div>
+
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+
+  <div
+    class="container hero-about-layout"
+    *ngIf="!showButtons && features.length">
+
+    <div class="hero-left">
+
+      <span class="hero-tag">
+
+        <span class="line"></span>
+
+        {{ tag }}
+
+      </span>
+
+      <h1>{{ title }}</h1>
+
+      <h3>{{ subtitle }}</h3>
+
+      <p>{{ description }}</p>
+
+      <div class="hero-features">
+
+        <div
+          class="hero-feature"
+          *ngFor="let feature of features">
+
+          <div class="feature-icon">
+
+            <mat-icon>{{ feature.icon }}</mat-icon>
+
+          </div>
+
+          <h6>{{ feature.title }}</h6>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ================= STANDARD ================= -->
+
+ <!-- STANDARD -->
+<div
+  class="container hero-standard-layout"
+  *ngIf="!showButtons && !features.length">
+
+  <div class="hero-content">
+
+    <h1>{{ title }}</h1>
+
+    <div class="divider">
+
+      <span></span>
+
+      <mat-icon>spa</mat-icon>
+
+      <span></span>
+
+    </div>
+
+    <h3 *ngIf="subtitle">
+
+      {{ subtitle }}
+
+    </h3>
+
+    <p *ngIf="description">
+
+      {{ description }}
+
+    </p>
+
+  </div>
+
+</div>
+
+  <!-- Curve -->
+
+  <div class="hero-curve">
+
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+
+      <path
+        fill="var(--main-bg)"
+        d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,120L0,120Z">
+      </path>
+
+    </svg>
 
   </div>
 

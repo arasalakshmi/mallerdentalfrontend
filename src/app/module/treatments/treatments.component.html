@@ -1,36 +1,9 @@
-<section class="contact-hero">
-
-  <img
-    class="hero-image"
-    [src]="page.hero.image"
-    [alt]="page.hero.title">
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-
-    <h1>{{ page.hero.title }}</h1>
-
-    <div class="divider">
-      <span></span>
-      <mat-icon>spa</mat-icon>
-      <span></span>
-    </div>
-
-    <h3>{{ page.hero.subtitle }}</h3>
-
-    <p>{{ page.hero.description }}</p>
-
-  </div>
-<div class="hero-curve">
-  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-    <path
-      fill="var(--main-bg)"
-      d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,64C1120,53,1280,43,1360,37.3L1440,32L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z">
-    </path>
-  </svg>
-</div>
-</section>
+<app-page-hero
+  [image]="page.hero.image"
+  [title]="page.hero.title"
+  [subtitle]="page.hero.subtitle"
+  [description]="page.hero.description">
+</app-page-hero>
 <!-- ===============================
      Services Section
 ================================ -->

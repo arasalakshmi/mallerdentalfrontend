@@ -1,71 +1,14 @@
 <!-- ================= HERO VIDEO SECTION ================= -->
 
-<section class="hero-section">
 
-  <img
-    [src]="home?.headerImage"
-    class="hero-bg"
-    alt="Maller Dental Clinic">
-
-  <div class="hero-overlay"></div>
-
-  <div class="container hero-content">
-
-    <div class="hero-text">
-
-      <span class="hero-tag">
-        <span class="line"></span>
-        Your Smile, Our Priority
-      </span>
-
-      <h1>
-       {{ home.hero.title }}
-      </h1>
-
-      <p>
-        {{ home?.heroSubtitle }}
-      </p>
-
-      <div class="hero-buttons">
-
-        <button
-          mat-raised-button
-          color="primary"
-          routerLink="/appointment/form">
-
-          <mat-icon>calendar_month</mat-icon>
-          Book Appointment
-
-        </button>
-
-        <button
-          mat-stroked-button
-          class="explore-btn"
-          routerLink="/services">
-
-          Explore Treatments
-          <mat-icon>arrow_forward</mat-icon>
-
-        </button>
-
-      </div>
-
-      <div class="hero-experience">
-
-        <mat-icon>verified</mat-icon>
-
-        <span>
-          <strong>28+</strong> Years of Trusted Dental Care
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
+<app-page-hero
+  [image]="home.headerImage"
+  [title]="home.hero.title"
+  [description]="home.heroSubtitle"
+  tag="Your Smile, Our Priority"
+  [showButtons]="true"
+  [showExperience]="true">
+</app-page-hero>
 
 <!-- ================= FOUNDERS / DOCTORS ================= -->
 <section class="treatment-section py-5">

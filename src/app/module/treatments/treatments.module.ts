@@ -9,6 +9,7 @@ import { TreatmentsComponent } from './treatments.component';
 import { treatmentRoutingModule } from './treatment-routing.module';
 import { TreatmentDetailComponent } from './treatment-detail/treatment-detail.component';
 import { SliderComponent } from '../slider/slider.component';
+import { PageModule } from '../../core/page-hero/page.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ SliderComponent,
     treatmentRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
+    PageModule,
     
   ]
 })

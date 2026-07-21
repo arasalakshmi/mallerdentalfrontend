@@ -1,5 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { PageHero } from './page.model';
+//import { PageHero } from './page.model';
+
+export interface HeroFeature {
+  icon: string;
+  title: string;
+}
 
 @Component({
   selector: 'app-page-hero',
@@ -8,5 +13,19 @@ import { PageHero } from './page.model';
   styleUrl: './page-hero.component.scss',
 })
 export class PageHeroComponent {
-  @Input() hero!: PageHero;
+ @Input() image = '';
+
+  @Input() title = '';
+
+  @Input() subtitle = '';
+
+  @Input() description = '';
+
+  @Input() tag = '';
+
+  @Input() showButtons = false;
+
+  @Input() showExperience = false;
+
+  @Input() features: HeroFeature[] = [];
 }

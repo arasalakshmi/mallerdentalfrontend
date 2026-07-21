@@ -7,6 +7,7 @@ import { MaterialModule } from '../../material.module';
 import { ReviewsComponent } from './reviews.component';
 import { ReviewRoutingModule } from './reviews-routing.module';
 import { ReviewListComponent } from './review-list/review-list.component';
+import { PageModule } from '../../core/page-hero/page.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReviewListComponent } from './review-list/review-list.component';
     ReviewRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
+    PageModule,
   ],
   exports:[ReviewListComponent]
 })

@@ -2,7 +2,7 @@ export const HOME_DATA = {
 
   /* ================= HERO ================= */
 
-  headerImage: 'assets/images/homeImg/headerImg.png',
+  headerImage: 'assets/images/homeImg/hero.png',
 
   hero: {
     tag: 'Your Smile, Our Priority',

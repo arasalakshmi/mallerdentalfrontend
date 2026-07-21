@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { SeoService } from '../../core/services/seo.service';
@@ -10,7 +10,7 @@ import { SERVICES, SERVICES_PAGE } from './treatment.data';
     styleUrl: './treatments.component.scss',
     standalone: false
 })
-export class TreatmentsComponent {
+export class TreatmentsComponent implements OnInit {
   //services:any;
  page = SERVICES_PAGE;
 
