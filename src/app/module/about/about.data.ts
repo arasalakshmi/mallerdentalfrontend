@@ -7,7 +7,7 @@ export const ABOUT_DATA = {
     description:
       'For over 20 years, Maller Dental Clinic has been committed to providing advanced, painless and ethical dental care with a personalized touch. Every smile we create reflects our passion for excellence and patient-first care.',
 
-    image: 'assets/images/homeImg/hero.png',
+    image: 'assets/images/abtImg/abthero.png',
     doctorImage: 'assets/images/homeImg/docImg.png',
 
     highlights: [

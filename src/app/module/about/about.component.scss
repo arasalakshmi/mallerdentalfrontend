@@ -1,5 +1,51 @@
 
+/*=========================================================
+  SECTION HEADING
+=========================================================*/
 
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.section-heading .section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:12px 30px;
+
+    background:#F3F4EC;
+
+    color:#5A6F3C;
+
+    border-radius:50px;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.section-heading .section-tag::before,
+.section-heading .section-tag::after{
+
+    content:"";
+
+    width:50px;
+
+    height:2px;
+
+    background:#D17C36;
+}
 /*=========================================================
   DOCTOR CARD
 =========================================================*/
