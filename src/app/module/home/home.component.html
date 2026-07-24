@@ -19,7 +19,7 @@
 
       <!-- LEFT SIDE -->
       <div class="col-lg-6">
-
+        <div class="section-header">
         <span class="section-tag">
           Complete Care For Every Smile
         </span>
@@ -27,7 +27,7 @@
         <h2 class="section-title">
           Our Dental Treatments
         </h2>
-
+</div>
         <div class="row g-4 mt-3">
 
           <div
@@ -72,18 +72,20 @@
 
       <!-- RIGHT SIDE -->
 <div class="col-lg-6">
+<div class="section-header">
+ <span class="section-tag">
+          Expert Care You Can Trust
+        </span>
 
+        <h2>About Our Doctor</h2>
+</div>
   <div class="doctor-card">
 
     <div class="doctor-top">
 
       <div class="doctor-content">
 
-        <span class="section-tag">
-          Expert Care You Can Trust
-        </span>
-
-        <h2>About Our Doctor</h2>
+       
 
         <h4>{{ home.doctor.name }}</h4>
 
@@ -130,41 +132,49 @@
 <!-- =========== WHY CHOOSE US ========= -->
 <section class="why-section">
 
-    <div class="container">
+  <div class="container">
 
-        <span class="section-tag">
-            Why Choose Us
-        </span>
+    <div class="section-header">
 
-        <h2 class="section-title">
-            Advanced Care. Personal Touch.
-        </h2>
+      <span class="section-tag">
+        <mat-icon>workspace_premium</mat-icon>
+       {{home.whyChooseUs.sectionTag}}
+      </span>
 
-        <div class="row why-row">
+      <h2>  {{home.whyChooseUs.title}}</h2>
 
-           <div
-  class="col-lg-3 col-6"
-  *ngFor="let item of home.whyChooseUs.items">
-
-  <div class="why-item">
-
-    <mat-icon>{{ item.icon }}</mat-icon>
-
-    <h3>{{ item.value }}</h3>
-
-    <p>{{ item.label }}</p>
-
-  </div>
-
-</div>
-
-
-        </div>
+      <p>
+         {{home.whyChooseUs.description}}
+      </p>
 
     </div>
 
+    <div class="row why-row">
+
+      <div
+        class="col-lg-3 col-md-6 mb-4"
+        *ngFor="let item of home.whyChooseUs.items">
+
+        <div class="why-item">
+
+          <div class="why-icon">
+            <mat-icon>{{ item.icon }}</mat-icon>
+          </div>
+
+          <h3>{{ item.value }}</h3>
+
+          <p>{{ item.label }}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
-<section class="testimonial-section py-5">
+<section class="testimonial-section">
   <div class="container">
 
      <app-review-list> </app-review-list>
@@ -174,108 +184,102 @@
 
 
 <!-- ================= APPOINTMENT ================= -->
-
 <section class="appointment-section">
 
   <div class="container">
 
-    <div class="appointment-layout">
+    <!-- Section Header -->
+    <div class="appointment-header">
 
-      <!-- Left Image -->
-      <div class="appointment-image">
+      <span class="section-tag">
+        {{ home.appointment.subtitle }}
+      </span>
 
-        <img
-          [src]="home.appointment.image"
-          alt="Maller Dental Clinic">
+      <h2>{{ home.appointment.title }}</h2>
 
-        <div class="floating-card">
+      <p>{{ home.appointment.description }}</p>
 
-          <mat-icon>call</mat-icon>
+    </div>
 
-          <div>
-            <span>Need Help?</span>
-            <h4>{{ home.appointment.floatingCard.phone }}</h4>
+    <!-- Premium Card -->
+    <div class="appointment-wrapper">
+
+      <!-- Appointment Form -->
+      <div class="appointment-card">
+
+        <app-appointment></app-appointment>
+
+        <!-- Trust Strip -->
+        <div class="trust-strip">
+
+          <div class="trust-item">
+            <mat-icon>verified</mat-icon>
+            <span>Same Day Appointment</span>
+          </div>
+
+          <div class="trust-item">
+            <mat-icon>health_and_safety</mat-icon>
+            <span>Sterilized Clinic</span>
+          </div>
+
+          <div class="trust-item">
+            <mat-icon>workspace_premium</mat-icon>
+            <span>Experienced Specialists</span>
           </div>
 
         </div>
 
       </div>
 
-      <!-- Appointment -->
-      <div class="appointment-card">
+      <!-- Clinic Image -->
+      <div class="appointment-image">
 
-        <span class="section-tag">
+        <img
+          [src]="home.appointment.image"
+          alt="Maller Dental Clinic">
 
-          {{ home.appointment.subtitle }}
+        <div class="image-overlay">
 
-        </span>
+          <div class="overlay-content">
 
-        <h2>
+            <span class="rating">
+              ★★★★★
+            </span>
 
-          {{ home.appointment.title }}
+            <h3>Trusted Since 1998</h3>
 
-        </h2>
+            <p>
+              Modern Dentistry • Comfortable Care
+            </p>
 
-        <!-- <div class="heading-divider">
+          </div>
 
-          <span></span>
-
-          <mat-icon>spa</mat-icon>
-
-          <span></span>
-
-        </div> -->
-
-        <p>
-
-          {{ home.appointment.description }}
-
-        </p>
-
-        <app-appointment></app-appointment>
+        </div>
 
       </div>
 
-      <!-- Contact -->
-      <div class="contact-card">
+    </div>
 
-        <span class="section-tag">
+    <!-- Contact Cards -->
+    <div class="contact-grid">
 
-          {{ home.contact.badge }}
+      <div
+        class="contact-card"
+        *ngFor="let item of home.contact.items">
 
-        </span>
+        <div class="contact-icon">
 
-        <h3>
+          <mat-icon>
+            {{ item.icon }}
+          </mat-icon>
 
-          {{ home.contact.title }}
+        </div>
 
-        </h3>
+        <div class="contact-content">
 
-        <div
-          class="contact-item"
-          *ngFor="let item of home.contact.items">
+          <h5>{{ item.title }}</h5>
 
-          <div class="contact-icon">
-
-            <mat-icon>
-
-              {{ item.icon }}
-
-            </mat-icon>
-
-          </div>
-
-          <div class="contact-content">
-
-            <h5>
-
-              {{ item.title }}
-
-            </h5>
-
-            <p [innerHTML]="item.value"></p>
-
-          </div>
+          <p [innerHTML]="item.value"></p>
 
         </div>
 
